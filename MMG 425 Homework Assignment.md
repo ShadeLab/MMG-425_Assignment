@@ -9,15 +9,15 @@
 5. To compare bacterial community composition of different ecosystems.
 
 ## MATERIALS
-```
+
 1. Raw 16S rRNA gene sequence data set from coal mine fire affected soil samples of Centralia.
 2. Access to the Ribosomal Database II Project website. 
 3. Laptops with wireless connection capability.
 4. Spreadsheet and graphics software such as Excel.
-```
+
 ### FastA Files
 ```
-For FastA file structure, read https://submit.ncbi.nlm.nih.gov/genbank/help/ 
+For FastQ file structure, read this [link](https://submit.ncbi.nlm.nih.gov/genbank/help/)
 and http://en.wikipedia.org/wiki/FASTA_format
 
 FastA files are simple text files containing a descriptor of a nucleotide 
