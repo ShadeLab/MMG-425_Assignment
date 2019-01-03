@@ -67,7 +67,6 @@ BBBBABBBBBBBGFFGGFGGGGHGGEFFHFHHHHHGFGGDHGHGGGGGGGGGHGGGGGGGGHGHHHHHHHHHHGGHGHHH
 
 <i>Background</i> 
 The analysis of 16S rRNA gene sequences is needed to investigate bacterial and archaeal community, their diversity, and structure. The 16S rRNA gene sequence analysis is also commonly conducted to understand the microbial community changes as consequence of the environmental disturbances. General workflow for amplicon analysis is divided into four main steps consists of:
-
 ### Data Pretreatment 
 Data pretreatment consists of multi-step proccesses including:
 1. Merging paired-end reads
@@ -85,12 +84,15 @@ Noise such as sequence errors and PCR chimeras that occurs during PCR amplificat
 Eukaryotes contamination such as chloroplast and mitochondria have to be removed from the amplicon reads.
 7. Rarefaction
 Data normalization is needed because the sequencing depth (the number of clean or quality filtered sequences) across samples can significantly differ. Uneven sequencing depth can affect microbial diversity estimation in one sample (alpha diversity). It also can affect microbial diversity comparison among samples.
-
 ### OTU table construction 
+1. OTU picking
+Operational taxonomic unit (OTU) is cluster or group of similar sequence variants that represent a taxonomic unit of bacteria/archaea species or genus. Read more about OTU in this [link](https://en.wikipedia.org/wiki/Operational_taxonomic_unit). The quality filtered sequences are clustered into OTUs based on the sequence identity cutoffs of 16S rRNA gene of 97, 98, or 99 %. There are three different strategies of OTU clustering namely de novo, closed-reference, and open-reference. Read this [link](http://qiime.org/tutorials/otu_picking.html) for more information.
+2. Taxonomy assignment (classifying)
+Taxonomic classification of OTU representatives into seven levels (Domain, Phylum, Class, Order, Family, Genus, Species) can be conducted by alignment against a 16S rRNA gene reference database such as RDP, SILVA database, GreenGenes.
 ### Data diversity analysis & visualization (alpha & beta diversity, multivariate analyses, barplot/heatmap etc.)
 ### OTU occupancy & co-occurence analyses.
-Data pretreatment and OTU table construction (step 1 & 2) can be conducted using different pipelines/platforms. There are several platforms that can be used for amplicon analysis such as [QIIME](http://qiime.org/tutorials/index.html), [mothur](https://mothur.org/wiki/MiSeq_SOP), [USEARCH](https://www.drive5.com/usearch/manual/uparse_pipeline.html), and the [RDPipeline](http://pyro.cme.msu.edu)(Ribosomal Database Project Pipeline).
-Some of those platforms such as QIIME and mothur also can be used to do diversity analyses and some data visualization. However, it is much better and more flexible to do ecological analyses (step 3 & 4) using ecological analysis softwares (vegan, Phyloseq) on R programming language.
+Data pretreatment and OTU table construction can be conducted using different pipelines/platforms. There are several platforms that can be used for amplicon analysis such as [QIIME](http://qiime.org/tutorials/index.html), [mothur](https://mothur.org/wiki/MiSeq_SOP), [USEARCH](https://www.drive5.com/usearch/manual/uparse_pipeline.html), and the [RDPipeline](http://pyro.cme.msu.edu)(Ribosomal Database Project Pipeline). Some of those platforms such as QIIME and mothur also can be used to do diversity analyses and some data visualization. However, it is much better and more flexible to do ecological analyses (e.g. microbial diversity, occupancy) using ecological packages (vegan, Phyloseq, microbiome) on R. The figure below will help you to understand the workflow of sequence analysis in general.
+![image](
 
 
 
