@@ -67,16 +67,22 @@ BBBBABBBBBBBGFFGGFGGGGHGGEFFHFHHHHHGFGGDHGHGGGGGGGGGHGGGGGGGGHGHHHHHHHHHHGGHGHHH
 
 <i>Background</i> 
 The analysis of 16S rRNA gene sequences is needed to investigate bacterial and archaeal community, their diversity, and structure. The 16S rRNA gene sequence analysis is also commonly conducted to understand the microbial community changes as consequence of the environmental disturbances. General workflow for amplicon analysis is divided into four main steps consists of:
-1. Data pretreatment & quality control
 
+1. Data Pretreatment 
+Data pretreatment consists of multi-step proccesses including:
+(1) <i>Merging paired-end reads</i>. Merging or assembly of paired-end reads generates single fastQ file from forward and reverse fastQ files. A pair is merged by aligning the forward read sequence to the reverse-complement of the reverse read sequence. In the overlap region where both reads cover the same bases, a single letter and Q score is derived from the aligned pair of letters and Q scores for each base. Read this [link](https://drive5.com/usearch/manual9/merge_pair.html) for more information.
+(2) <i>Primers and adapters removal</i>. Primers, adapters, or any unwanted type of synthetic sequences should be removed from the sequencing reads, otherwise they will cause sequence contamination.
+(3) <i>Quality filtering</i>. Quality filtering is conducted to reduce the number of errors and to avoid adverse effects in the downstream analysis. This can be done by removing reads with poor quality bases (e.g. low quality (Phred) score) and discarding ambiguous/unknown bases (N). 
+Quality (Phred) score: the quality score of a base, which is an integer value representing the estimated probability of an error, i.e. that the base is incorrect. See this [link](https://en.wikipedia.org/wiki/Phred_quality_score).
+(4) <i>Length trimming</i>. Length trimming is conducted so all of the sequences have the same length and start at the same position to get good OTU sequences. However, length trimming is usually not necessary for overlapping paired-end reads. Trimming for fungal ITS amplicon reads is also not necessary because the nature of ITS gene that have large variations in length.
+(5) <i>Denoising & chimera checking</i>. Denoising is removing noise such as sequence errors and chimeras that occurs during PCR amplification or sequencing process.
+(6) <i>Eukaryotes contamination removal</i>. Eukaryotes contamination such as chloroplast and mitochondria have to be removed from the amplicon reads.
+(7) <i>Rarefaction</i>. Data normalization of quality filtered sequence 
 
-
-
-
-(2) OTU table construction,
-(3) data diversity analysis & visualization (alpha & beta diversity, multivariate analyses, barplot/heatmap etc.), and
-(4) OTU occupancy & co-occurence analyses.
-Data pretreatment, quality control, and OTU table construction (step 1 & 2) can be conducted using different pipelines/platforms. There are several platforms that can be used for amplicon analysis such as [QIIME](http://qiime.org/tutorials/index.html), [mothur](https://mothur.org/wiki/MiSeq_SOP), [USEARCH](https://www.drive5.com/usearch/manual/uparse_pipeline.html), and the [RDPipeline](http://pyro.cme.msu.edu)(Ribosomal Database Project Pipeline).
+2. OTU table construction 
+3. data diversity analysis & visualization (alpha & beta diversity, multivariate analyses, barplot/heatmap etc.), and
+4. OTU occupancy & co-occurence analyses.
+Data pretreatment and OTU table construction (step 1 & 2) can be conducted using different pipelines/platforms. There are several platforms that can be used for amplicon analysis such as [QIIME](http://qiime.org/tutorials/index.html), [mothur](https://mothur.org/wiki/MiSeq_SOP), [USEARCH](https://www.drive5.com/usearch/manual/uparse_pipeline.html), and the [RDPipeline](http://pyro.cme.msu.edu)(Ribosomal Database Project Pipeline).
 Some of those platforms such as QIIME and mothur also can be used to do diversity analyses and some data visualization. However, it is much better and more flexible to do ecological analyses (step 3 & 4) using ecological analysis softwares (vegan, Phyloseq) on R programming language.
 
 
