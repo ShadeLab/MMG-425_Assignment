@@ -71,23 +71,22 @@ The analysis of 16S rRNA gene sequences is needed to investigate bacterial and a
 Data pretreatment consists of multi-step proccesses including:
 1. <i>Merging paired-end reads</i>. 
 Merging or assembly of paired-end reads generates single fastQ file from forward and reverse fastQ files. A pair is merged by aligning the forward read sequence to the reverse-complement of the reverse read sequence. In the overlap region where both reads cover the same bases, a single letter and Q score is derived from the aligned pair of letters and Q scores for each base. Read this [link](https://drive5.com/usearch/manual9/merge_pair.html) for more information.
-2. </i>Primers and adapters removal</i>.
+2. <i>Primers and adapters removal</i>.
 Primers, adapters, or any unwanted type of synthetic sequences should be removed from the sequencing reads, otherwise they will cause sequence contamination.
-3. Quality filtering. 
-Quality filtering is conducted to reduce the number of errors and to avoid adverse effects in the downstream analysis. This can be done by removing reads with poor quality bases (e.g. low quality (Phred) score) and discarding ambiguous/unknown bases (N). 
-Quality (Phred) score: the quality score of a base, which is an integer value representing the estimated probability of an error, i.e. that the base is incorrect. See this [link](https://en.wikipedia.org/wiki/Phred_quality_score).
-4. Length trimming
+3. <i>Quality filtering</i>. 
+Quality filtering is conducted to reduce the number of errors and to avoid adverse effects in the downstream analysis. This can be done by removing reads with poor quality bases (e.g. low quality (Phred) score) and discarding ambiguous/unknown bases (N). Quality (Phred) score: the quality score of a base, which is an integer value representing the estimated probability of an error, i.e. that the base is incorrect. See this [link](https://en.wikipedia.org/wiki/Phred_quality_score).
+4. <i>Length trimming</i>. 
 Length trimming is conducted so all of the sequences have the same length and start at the same position to get good OTU sequences. However, length trimming is usually not necessary for overlapping paired-end reads. Trimming for fungal ITS amplicon reads is also not necessary because the nature of ITS gene that have large variations in length.
-5. Denoising & chimera checking
+5. <i>Denoising & chimera checking</i>. 
 Noise such as sequence errors and PCR chimeras that occurs during PCR amplification or sequencing process should be eliminated from the amplicon reads because they can cause inflation of microbial diversity estimation.
-6. Eukaryotes contamination removal
+6. <i>Eukaryotes contamination removal</i>.
 Eukaryotes contamination such as chloroplast and mitochondria have to be removed from the amplicon reads.
-7. Rarefaction
+7. <i>Rarefaction</i>.
 Data normalization is needed because the sequencing depth (the number of clean or quality filtered sequences) across samples can significantly differ. Uneven sequencing depth can affect microbial diversity estimation in one sample (alpha diversity). It also can affect microbial diversity comparison among samples.
 ### 2. OTU table construction 
-1. OTU picking
+1. <i>OTU picking</i>.
 Operational taxonomic unit (OTU) is cluster or group of similar sequence variants that represent a taxonomic unit of bacteria/archaea species or genus. Read more about OTU in this [link](https://en.wikipedia.org/wiki/Operational_taxonomic_unit). The quality filtered sequences are clustered into OTUs based on the sequence identity cutoffs of 16S rRNA gene of 97, 98, or 99 %. There are three different strategies of OTU clustering namely de novo, closed-reference, and open-reference. Read this [link](http://qiime.org/tutorials/otu_picking.html) for more information.
-2. Taxonomy assignment (classifying)
+2. <i>Taxonomy assignment (classifying)</i>.
 Taxonomic classification of OTU representatives into seven levels (Domain, Phylum, Class, Order, Family, Genus, Species) can be conducted by alignment against a 16S rRNA gene reference database such as RDP, SILVA database, GreenGenes.
 ### 3. Data diversity analysis & visualization (alpha & beta diversity, multivariate analyses, barplot/heatmap etc.)
 ### 4. OTU occupancy & co-occurence analyses.
