@@ -94,91 +94,46 @@ Taxonomic classification of OTU representatives into seven levels (Domain, Phylu
 Data pretreatment and OTU table construction can be conducted using different pipelines/platforms. There are several platforms that can be used for amplicon analysis such as [QIIME](http://qiime.org/tutorials/index.html), [mothur](https://mothur.org/wiki/MiSeq_SOP), [USEARCH](https://www.drive5.com/usearch/manual/uparse_pipeline.html), and the [RDPipeline](http://pyro.cme.msu.edu)(Ribosomal Database Project Pipeline). Some of those platforms such as QIIME and mothur also can be used to do diversity analyses and some data visualization. However, it is much better and more flexible to do ecological analyses (e.g. microbial diversity, occupancy) using ecological packages (vegan, Phyloseq, microbiome) on R. The figure below will help you to understand the workflow of sequence analysis in general.
 ![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/Workflow_image.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## TUTORIAL FOR 16S rRNA GENE SEQUENCES ANALYSIS USING RDP's PIPELINE
-
 Form into CATME teams and gather together in the class room. Have at least one laptop with wireless connection amongst you, with Excel and a web browser open.
-
 We will use paired-end of 16S rRNA gene sequences that have been downloaded from NCBI, SRA as described previously. There are three pairs of fastQ files (six sequence fastQ files in total) that were compressed into one .tar file. 
 
 ### Go to http://rdp.cme.msu.edu/tutorials/workflows/16S_supervised_flow.html to observe the 16S supervised workflow of RDP's pipeline 
 To get more info of the RDPipeline, you can go to the [website](http://pyro.cme.msu.edu)
 
 ### The RDPipeline Processing Steps:
-
 #### Step 1. Initial Processing (Assemble Paired End Reads)
 The initial processing of RDPipeline contains multi-steps process and quality filtering including sorting the raw reads by sample tag, trimming off tag and primer regions, and removing low quality sequences (Cole et al. 2014). It also uses a tool called Assembler to assembly the paired-end reads (Cole et al. 2014).
-
-1.) Use the fastQ files of 16S rRNA gene sequence data that have been downloaded as the input fastQ files
-2.) Go to https://pyro.cme.msu.edu/login.spr (you don't need to login or make an account) and hit "TEST DRIVE" button.
-3.) Upload the .tar file to the initial processing tool main page: https://pyro.cme.msu.edu/init/form.spr
-4.) Fill the initial processing form. The forward primer(s) or reverse primer(s) are not required. 
+1. Use the fastQ files of 16S rRNA gene sequence data that have been downloaded as the input fastQ files
+2. Go to https://pyro.cme.msu.edu/login.spr (you don't need to login or make an account) and hit "TEST DRIVE" button.
+3. Upload the .tar file to the initial processing tool main page: https://pyro.cme.msu.edu/init/form.spr
+4. Fill the initial processing form. The forward primer(s) or reverse primer(s) are not required. 
 Job name = use any name
-Max number of N's = 0
-Min Read Q score = 27
+Max number of N's = 0 (number of ambiguous base allowed)
+Min Read Q score = 27 (minimum Phred score used)
 Min sequence length = 250
 Max sequence length = 280
-5.) Make sure to check the box "Assemble paired end reads". 
-6.) Hit "Perform Initial Processing" button and wait for a while.
-7.) Check if your job is still running or complete by hitting "my jobs" tab on the right corner of the window.
-8.) Download the output file once the job is complete.
-9.) Inspect your output data by looking at the output file: http://rdp.cme.msu.edu/tutorials/init_process/RDPtutorial_INITIAL-PROCESS_pe.html
+5. Make sure to check the box "Assemble paired end reads". 
+6. Hit "Perform Initial Processing" button and wait for a while.
+7. Check if your job is still running or complete by hitting "my jobs" tab on the right corner of the window.
+8. Download the output file once the job is complete.
+9. Inspect your output data by looking at the output file: http://rdp.cme.msu.edu/tutorials/init_process/RDPtutorial_INITIAL-PROCESS_pe.html
 
 #### Step 2. Taxonomic Classification Using RDP Classifier
+Open the RDP Classifier at https://pyro.cme.msu.edu/classifier/form.spr and inspect it. Toggle on the Classifier tab and inspect it. “Run” the classifier with each of the three files by attaching the text file as the procedure indicates, and uploading. Wait for the output.Examine the output for dominant and rare taxa. ANSWER THIS QUESTION: what is the most common taxon at the Phylum level? Capture the output in a text file and dump it to Excel. Sort the file again by “Phylum” to capture the frequency of matches to Phylum. SAVE THE THREE CLASSIFICATIONS IN AN EXCEL FILE USING PHYLUM AS THE IDENTIFIER.
 
-1.) Retrieve the FastA files from the D2L course site. 
-2.) Open the RDP Classifier at https://pyro.cme.msu.edu/classifier/form.spr and inspect it.
-Toggle on the Classifier tab and inspect it. 
-3.) “Run” the classifier with each of the three files by attaching the text file as the procedure indicates, and uploading. Wait for the output.  
-4.) Examine the output for dominant and rare taxa. 
-5.) ANSWER THIS QUESTION: what is the most common taxon at the Phylum level?  
-6.) Capture the output in a text file and dump it to Excel.  
-8.) Sort the file again by “Phylum” to capture the frequency of matches to Phylum. 
-9.) SAVE THE THREE CLASSIFICATIONS IN AN EXCEL FILE USING PHYLUM AS THE IDENTIFIER.  DISCARD ALL OTHER IDENTIFIERS (FAMILY, ORDER, SPECIES, ETC.).
+### Step 3. Making a rank abundance curve to assess evenness
+Construct a Rank Abundance Curve of Phylum x frequency of match using the histogram graph function in Excel. Use only phylum classified results. Repeat and compare for the three data sets (C04, C17, C16). SAVE THE ABUNDANCE CURVES IN AN EXCEL FILE.
 
-### Step 3:  Making a rank abundance curve to assess evenness
-
- 
-1.) Construct a Rank Abundance Curve of Phylum x frequency of match using the histogram graph function in Excel. 
-2.) Use only phylum classified results.  
-3.) Repeat and compare for the three data sets (C04, C17, C16). 
-4.) SAVE THE ABUNDANCE CURVES IN AN EXCEL FILE.
-
-### Step 4:  SAMPLING CURVE: ESTIMATION OF RICHNESS
-
-(1) Construct a Sampling Curve at the genus level using the following procedure. 
-(2) Resample each of the FastA files by taking approximately 40 rows of data at a time and classifying each set of 40 rows. 
-(3) Use only genus classified results.  Construct a set of samples (for 371 rows, that will be about 9 samples, maybe 10) into a sampling curve by plotting the number of genera that are discovered on the Y axis and the sample number on the X axis.  
-(4) ANSWER THESE QUESTIONS:  Does the curve deflect?  Can you estimate Richness from the curve using the asymptotic method? 
-(5) SAVE THE FOUR CURVES IN AN EXCEL FILE.
+### Step 4. Sampling curve: estimation of richness
+Construct a Sampling Curve at the genus level using the following procedure. Resample each of the FastA files by taking approximately 40 rows of data at a time and classifying each set of 40 rows. Use only genus classified results. Construct a set of samples (for 371 rows, that will be about 9 samples, maybe 10) into a sampling curve by plotting the number of genera that are discovered on the Y axis and the sample number on the X axis. ANSWER THESE QUESTIONS: Does the curve deflect? Can you estimate Richness from the curve using the asymptotic method? SAVE THE FOUR CURVES IN AN EXCEL FILE.
 
 ### Make a bar chart of phylum-level composition in excel
 
-### Step 5:  COMMUNITY COMPARISONS using RDP II Libcompare
+### Step 5. Community comparisons using RDP II Libcompare
+Using the LIBCOMPARE tool in RDP II, submit pairwise FastQ files for community composition for the four files. There will be 6 comparisons. The “significance” test is a probability value, thus 6.1EXP-1 is read as P = 0.61 (i.e., not significant). A value of 6.1EXP-3 is read as P = 0.0061 (i.e., a significant difference in frequencies of the taxa of interest). ANSWER THESE QUESTIONS: Which of the communities are rather similar and which are very different?  Does “organic” differ from “conventional?”  Does “fly gut” differ from “cow feces?”
 
-(1) Using the LIBCOMPARE tool in RDP II, submit pairwise FastQ files for community composition for the four files.  
-There will be 6 comparisons.  
-The “significance” test is a probability value, thus 6.1EXP-1 is read as P = 0.61 (i.e., not significant).  
-A value of 6.1EXP-3 is read as P = 0.0061 (i.e., a significant difference in frequencies of the taxa of interest). 
-(2) ANSWER THESE QUESTIONS: Which of the communities are rather similar and which are very different?  Does “organic” differ from “conventional?”  Does “fly gut” differ from “cow feces?”
-
-
-## MAKE YOUR FINAL REPORT
+### Step 6. Make the final report
 
 
 
