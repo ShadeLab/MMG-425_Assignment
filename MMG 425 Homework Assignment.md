@@ -19,6 +19,8 @@
 
 One of the projects in Dr. Shade's lab is Centralia. It is an underground coalmine fire in Pennsylvania that has been burning since 1962. The objective of the project is to investigate the impact of an extreme and long-term thermal disturbance on soil microbial communities. The soil samples were taken and classified into three different types: Fire Affected, Recovered, and Reference. Amplification and sequencing of 16S rRNA gene was conducted from those soil samples to identify the bacterial and archaeal communities. 
 
+**Insert a table** and include each sample's name, its fire category, its temperature, its pH, SO4, Nitrate, ammonium, arsenic?
+
 Raw 16S rRNA gene sequences that were obtained from the RTSF, MSU sequencing facility, were submitted to the National Center for Biotechnology Information (NCBI) and they are available in NCBI’s Sequence Read Archive (SRA).
 The Sequence Read Archive (SRA) is an international bioinformatics database that stores raw sequencing data and alignment information from high-throughput sequencing platforms such as Ilumina MiSeq and it is established under International Nucleotide Sequence Database Collaboration (INSDC). To know more the SRA overview, please see this [link](https://www.ncbi.nlm.nih.gov/sra/docs/)
 
@@ -88,6 +90,7 @@ Data normalization is needed because the sequencing depth (the number of clean o
 Operational taxonomic unit (OTU) is cluster or group of similar sequence variants that represent a taxonomic unit of bacteria/archaea species or genus. Read more about OTU in this [link](https://en.wikipedia.org/wiki/Operational_taxonomic_unit). The quality filtered sequences are clustered into OTUs based on the sequence identity cutoffs of 16S rRNA gene of 97, 98, or 99 %. There are three different strategies of OTU clustering namely de novo, closed-reference, and open-reference. Read this [link](http://qiime.org/tutorials/otu_picking.html) for more information.
 2. <i>Taxonomy assignment (classifying)</i>.
 Taxonomic classification of OTU representatives into seven levels (Domain, Phylum, Class, Order, Family, Genus, Species) can be conducted by alignment against a 16S rRNA gene reference database such as RDP, SILVA database, GreenGenes.
+3.  We will provide an OTU table for you for this exercise.
 ### 3. Data diversity analysis & visualization (alpha & beta diversity, multivariate analyses, barplot/heatmap etc.)
 ### 4. OTU occupancy & co-occurence analyses.
 Data pretreatment and OTU table construction can be conducted using different pipelines/platforms. There are several platforms that can be used for amplicon analysis such as [QIIME](http://qiime.org/tutorials/index.html), [mothur](https://mothur.org/wiki/MiSeq_SOP), [USEARCH](https://www.drive5.com/usearch/manual/uparse_pipeline.html), and the [RDPipeline](http://pyro.cme.msu.edu)(Ribosomal Database Project Pipeline). Some of those platforms such as QIIME and mothur also can be used to do diversity analyses and some data visualization. However, it is much better and more flexible to do ecological analyses (e.g. microbial diversity, occupancy) using ecological packages (vegan, Phyloseq, microbiome) on R. The figure below will help you to understand the workflow of sequence analysis in general.
@@ -119,19 +122,32 @@ Max sequence length = 280
 9. Inspect your output data by looking at the output file: http://rdp.cme.msu.edu/tutorials/init_process/RDPtutorial_INITIAL-PROCESS_pe.html
 
 #### Step 2. Taxonomic Classification Using RDP Classifier
-Open the RDP Classifier at https://pyro.cme.msu.edu/classifier/form.spr and inspect it. Toggle on the Classifier tab and inspect it. “Run” the classifier with each of the three files by attaching the text file as the procedure indicates, and uploading. Wait for the output.Examine the output for dominant and rare taxa. ANSWER THIS QUESTION: what is the most common taxon at the Phylum level? Capture the output in a text file and dump it to Excel. Sort the file again by “Phylum” to capture the frequency of matches to Phylum. SAVE THE THREE CLASSIFICATIONS IN AN EXCEL FILE USING PHYLUM AS THE IDENTIFIER.
+Open the RDP Classifier at https://pyro.cme.msu.edu/classifier/form.spr and inspect it. Toggle on the Classifier tab and inspect it. “Run” the classifier with each of the three files by attaching the text file as the procedure indicates, and uploading. Wait for the output. Examine the output for dominant and rare taxa. Capture the output in a text file and dump it to Excel. Sort the file again by “Phylum” to capture the frequency of matches to Phylum. SAVE THE THREE CLASSIFICATIONS IN AN EXCEL FILE USING PHYLUM AS THE IDENTIFIER.
+1.  What is the most common taxon at the Phylum level, for each sample? 
+2.  What is the rarest taxon at the Phylum level, for each sample?
+3.  Make a stacked bar chart. Compare:  How does the phylum-level composition vary by soil temperature and fire impact?
+4.  Make a hypothesis to explain why particular phyla are found in particular sites.  Hint: use the environmental data provided above, and then use the internet and other references to look up the requirements of the most abundant phyla and use that information to inform your hypothesis.  Make sure that you make a statement explaining the phylum distributions for each sample. 
+***Fina will find directions from Keara for stacked bar chart and insert them here**
 
-### Step 3. Making a rank abundance curve to assess evenness
-Construct a Rank Abundance Curve of Phylum x frequency of match using the histogram graph function in Excel. Use only phylum classified results. Repeat and compare for the three data sets (C04, C17, C16). SAVE THE ABUNDANCE CURVES IN AN EXCEL FILE.
+### Step 3. Making a Species Abundance Distribution to assess evenness.
+Use the provided OTU table (there should be 3 columns one for each sample) for this step.  First, sum the total abundance for each OTU.  OTUs are in ROWS, so make a new column of row sums in excel.  Then, sort from high to low.  
+1.  From these data, construct a Species Abundance Distribution (also sometimes called a ranked abundance curve). Remember that the x-axis is the ranked taxa from most to least abundant, and the y-axis is the abundance.  Save the chart for the lab report.
+2.  Intepret the chart.  What does it tell you about the evenness of the community?
 
-### Step 4. Sampling curve: estimation of richness
-Construct a Sampling Curve at the genus level using the following procedure. Resample each of the FastA files by taking approximately 40 rows of data at a time and classifying each set of 40 rows. Use only genus classified results. Construct a set of samples (for 371 rows, that will be about 9 samples, maybe 10) into a sampling curve by plotting the number of genera that are discovered on the Y axis and the sample number on the X axis. ANSWER THESE QUESTIONS: Does the curve deflect? Can you estimate Richness from the curve using the asymptotic method? SAVE THE FOUR CURVES IN AN EXCEL FILE.
-
-### Step 5. Community comparisons using RDP II Libcompare
-Using the LIBCOMPARE tool in RDP II, submit pairwise FastQ files for community composition for the four files. There will be 6 comparisons. The “significance” test is a probability value, thus 6.1EXP-1 is read as P = 0.61 (i.e., not significant). A value of 6.1EXP-3 is read as P = 0.0061 (i.e., a significant difference in frequencies of the taxa of interest). ANSWER THESE QUESTIONS: Which of the communities are rather similar and which are very different?
+### Step 4.  Assess the richness for each sample.
+Use the provided OTU table for this step.  First, copy the data and paste it into a new sheet. Make a presence-absence table from the data but Finding and Replacing and values > 1 with 1.  Us an IF formula to do so:
+=IF(*cell*>1,1,0)
+The interpretation of this statement is that if the contents in the cell are greater than 1, replace with 1, and if not, replace with zero.  In the end, the zeros (absenses) will remain zeros.  This transformation removes the relative abundance data and provides presence-absence data, but allows for easy plotting of how many new OTUs are observed with increasing sequencing effort. 
+1.  What is the richness for each sample?  Which sample has the highest richness?  Which has the lowest? 
+2.  Hypothesize as to what drives the richness pattern that you observe.  What about the environment or ecology would lead to this pattern?
 
 ### Step 6. Make the final report
-Make your final report in word document. The content including: introduction, objective, result and discussion.
+Make your final report in word document. The final report should be turned in (one per team) on D2L.  The content should include: 
+1.  Introduction:  summarize and synthesize your background reading on the Centralia environment and unique expectations of its microbial ecology.  THis should be 2-3 paragraphs.  Use the references provided on D2L, but you are welcome to find additional references.  
+2.  Results.  Use the headings above for steps 1-4 and answer each question in full sentences. Insert any charts and figures into the report.  
+3.  Conclusions and Future Directions.  Based on your exploration of these sequences, what conclusions can you make about the communities that live in Centralia?  What outstanding hypothese do you have?  What additional sampling or experiments could be done to address these hypotheses?  
+4.  Annotated references.  Use the numeric alphabetica citation format (the same as for the Microbial Ecosystems Project) and annotated in the same way.  
+
 
 
 
