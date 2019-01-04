@@ -127,8 +127,6 @@ Construct a Rank Abundance Curve of Phylum x frequency of match using the histog
 ### Step 4. Sampling curve: estimation of richness
 Construct a Sampling Curve at the genus level using the following procedure. Resample each of the FastA files by taking approximately 40 rows of data at a time and classifying each set of 40 rows. Use only genus classified results. Construct a set of samples (for 371 rows, that will be about 9 samples, maybe 10) into a sampling curve by plotting the number of genera that are discovered on the Y axis and the sample number on the X axis. ANSWER THESE QUESTIONS: Does the curve deflect? Can you estimate Richness from the curve using the asymptotic method? SAVE THE FOUR CURVES IN AN EXCEL FILE.
 
-### Make a bar chart of phylum-level composition in excel
-
 ### Step 5. Community comparisons using RDP II Libcompare
 Using the LIBCOMPARE tool in RDP II, submit pairwise FastQ files for community composition for the four files. There will be 6 comparisons. The “significance” test is a probability value, thus 6.1EXP-1 is read as P = 0.61 (i.e., not significant). A value of 6.1EXP-3 is read as P = 0.0061 (i.e., a significant difference in frequencies of the taxa of interest). ANSWER THESE QUESTIONS: Which of the communities are rather similar and which are very different?
 
