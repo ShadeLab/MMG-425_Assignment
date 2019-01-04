@@ -2,11 +2,11 @@
 
 ## LEARNING OBJECTIVE
 
-1. To acquaint MMG 425 participants with the process of microbial community analysis of 16S rRNA gene sequence data using RDP's pipeline and community comparison systems.
-2. To familiarize MMG 425 participants with FastQ files and the Ribosomal Database II Project (RDP II) Classifier.
-3. To classify communities into bacterial taxa. 
-4. To construct: (a) Sampling Curve and (b) Rank Abundance Curve figures from classified 16S rRNA gene sequence files.
-5. To compare bacterial community composition of different ecosystems.
+1. Understand the general process of microbial community analysis using 16S rRNA gene sequence data.  We will use the sequence analysis tools from the Ribosomal Database Project (RDP).
+2. Familiarize with sequence respositories (where to find and download real data), what "raw" sequence data looks like, and generally how to manipulate these data for analysis using online tools and local worksheets. 
+3. Construct charts to visualize and interpret aspects of diversity that are commonly used in community ecology.  
+4. Compare bacterial community composition across environmental gradients and hypothesize as to the drivers of the observed patterns.
+5.  Reference the literature and resources to build conclusions about the data and suggest next avenues of research.  
 
 ## MATERIALS
 
