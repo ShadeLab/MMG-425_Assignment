@@ -130,10 +130,10 @@ Construct a Sampling Curve at the genus level using the following procedure. Res
 ### Make a bar chart of phylum-level composition in excel
 
 ### Step 5. Community comparisons using RDP II Libcompare
-Using the LIBCOMPARE tool in RDP II, submit pairwise FastQ files for community composition for the four files. There will be 6 comparisons. The “significance” test is a probability value, thus 6.1EXP-1 is read as P = 0.61 (i.e., not significant). A value of 6.1EXP-3 is read as P = 0.0061 (i.e., a significant difference in frequencies of the taxa of interest). ANSWER THESE QUESTIONS: Which of the communities are rather similar and which are very different?  Does “organic” differ from “conventional?”  Does “fly gut” differ from “cow feces?”
+Using the LIBCOMPARE tool in RDP II, submit pairwise FastQ files for community composition for the four files. There will be 6 comparisons. The “significance” test is a probability value, thus 6.1EXP-1 is read as P = 0.61 (i.e., not significant). A value of 6.1EXP-3 is read as P = 0.0061 (i.e., a significant difference in frequencies of the taxa of interest). ANSWER THESE QUESTIONS: Which of the communities are rather similar and which are very different?
 
 ### Step 6. Make the final report
-
+Make your final report in word document. The content including: introduction, objective, result and discussion.
 
 
 
