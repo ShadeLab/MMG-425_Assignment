@@ -16,8 +16,18 @@
 4. Spreadsheet and graphics software such as Excel.
 
 ### Getting familiar with the dataset: The Centralia underground coal mine fire!
-
 One of the projects in Dr. Shade's lab is Centralia. It is an underground coalmine fire in Pennsylvania that has been burning since 1962. The objective of the project is to investigate the impact of an extreme and long-term thermal disturbance on soil microbial communities. The soil samples were taken and classified into three different types: Fire Affected, Recovered, and Reference. Amplification and sequencing of 16S rRNA gene was conducted from those soil samples to identify the bacterial and archaeal communities. 
+
+Sample ID	Soil temperature	Classification	Organic matter	pH	NO3N (ppm)	NH4N
+(ppm)	Sulfate/Sulfur
+(ppm)	Arsenic
+(ppm)	Soil moisture
+C04	13.3	Recovered	12.8	4.6	0.8	5	23	3.6	24.2
+C13	57.4	Fire Affected	7.1	8	4.6	1.7	28	2.58	14.7
+C17	12.1	Reference	6.1	5.7	0.1	3.3	6	1.99	13.6
+
+
+
 
 **Insert a table** and include each sample's name, its fire category, its temperature, its pH, SO4, Nitrate, ammonium, arsenic?
 
@@ -25,7 +35,6 @@ Raw 16S rRNA gene sequences that were obtained from the RTSF, MSU sequencing fac
 The Sequence Read Archive (SRA) is an international bioinformatics database that stores raw sequencing data and alignment information from high-throughput sequencing platforms such as Ilumina MiSeq and it is established under International Nucleotide Sequence Database Collaboration (INSDC). To know more the SRA overview, please see this [link](https://www.ncbi.nlm.nih.gov/sra/docs/)
 
 ### How to fetch your raw sequence data from NCBI Sequence Read Archive (SRA)
-
 1. Go to this [link](https://www.ncbi.nlm.nih.gov/sra/SRP082686).
 2. There are 54 items and those are raw 16S rRNA gene amplicon sequencing data from Centralia coal mine surface soil consist of 18 different sites and three replicates for each site. Pick three data set, number 1, 8, and 12.
 (1) C04_05102014_R1_D01_GTATGCGCTGTA_L001_R1_001 represent Recovered site
