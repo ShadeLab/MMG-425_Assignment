@@ -18,13 +18,10 @@
 ### Getting familiar with the dataset: The Centralia underground coal mine fire!
 One of the projects in Dr. Shade's lab is Centralia. It is an underground coalmine fire in Pennsylvania that has been burning since 1962. The objective of the project is to investigate the impact of an extreme and long-term thermal disturbance on soil microbial communities. The soil samples were taken and classified into three different types: Fire Affected, Recovered, and Reference. Amplification and sequencing of 16S rRNA gene was conducted from those soil samples to identify the bacterial and archaeal communities. 
 
-Sample ID	Soil temperature	Classification	Organic matter	pH	NO3N (ppm)	NH4N
-(ppm)	Sulfate/Sulfur
-(ppm)	Arsenic
-(ppm)	Soil moisture
-C04	13.3	Recovered	12.8	4.6	0.8	5	23	3.6	24.2
-C13	57.4	Fire Affected	7.1	8	4.6	1.7	28	2.58	14.7
-C17	12.1	Reference	6.1	5.7	0.1	3.3	6	1.99	13.6
+Sample ID,Soil temperature,Classification,Organic matter,pH	NO3N (ppm),NH4N (ppm),Sulfate/Sulfur (ppm),Arsenic (ppm),Soil moisture
+C04,13.3,Recovered,12.8,4.6,0.8,5,23,3.6,24.2
+C13,57.4,Fire Affected,7.1,8,4.6,1.7,28,2.58,14.7
+C17,12.1,Reference,6.1,5.7,0.1,3.3,6,1.99,13.6
 
 
 
