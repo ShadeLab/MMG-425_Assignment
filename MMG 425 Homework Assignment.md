@@ -24,11 +24,7 @@ One of the projects in Dr. Shade's lab is Centralia. It is an underground coalmi
 | C13 | 57.4 | Fire Affected | 7.1 | 8 | 4.6 | 1.7 | 28 | 2.58 | 14.7 |
 | C17 | 12.1 | Reference | 6.1 | 5.7 | 0.1 | 3.3 | 6 | 1.99 | 13.6 |
 
-
-
-
-
-
+[image!](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/Map_image.pdf)
 
 Raw 16S rRNA gene sequences that were obtained from the RTSF, MSU sequencing facility, were submitted to the National Center for Biotechnology Information (NCBI) and they are available in NCBI’s Sequence Read Archive (SRA).
 The Sequence Read Archive (SRA) is an international bioinformatics database that stores raw sequencing data and alignment information from high-throughput sequencing platforms such as Ilumina MiSeq and it is established under International Nucleotide Sequence Database Collaboration (INSDC). To know more the SRA overview, please see this [link](https://www.ncbi.nlm.nih.gov/sra/docs/). Here, you will also learn how to download the raw sequence data from NCBI, SRA by following the steps below.
