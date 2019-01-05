@@ -23,8 +23,11 @@ C04,13.3,Recovered,12.8,4.6,0.8,5,23,3.6,24.2
 C13,57.4,Fire Affected,7.1,8,4.6,1.7,28,2.58,14.7
 C17,12.1,Reference,6.1,5.7,0.1,3.3,6,1.99,13.6
 
-
-
+| Sample ID | Soil temperature | Classification | Organic matter | pH | NO3N (ppm) | NH4N (ppm) | Sulfate/Sulfur (ppm) | Arsenic (ppm) | Soil moisture |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| C04 | 13.3 | Recovered | 12.8 | 4.6 | 0.8 | 5 | 23 | 3.6 | 24.2 |
+| C13 | 57.4 | Fire Affected | 7.1 | 8 | 4.6 | 1.7 | 28 | 2.58 | 14.7 |
+| C17 | 12.1 | Reference | 6.1 | 5.7 | 0.1 | 3.3 | 6 | 1.99 | 13.6 |
 
 **Insert a table** and include each sample's name, its fire category, its temperature, its pH, SO4, Nitrate, ammonium, arsenic?
 
