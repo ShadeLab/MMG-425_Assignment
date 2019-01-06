@@ -69,7 +69,7 @@ BBBBABBBBBBBGFFGGFGGGGHGGEFFHFHHHHHGFGGDHGHGGGGGGGGGHGGGGGGGGHGHHHHHHHHHHGGHGHHH
 ## GENERAL WORKFLOW FOR SEQUENCE ANALYSIS
 
 <i>Background</i>
-The analysis of 16S rRNA gene sequences is needed to investigate bacterial and archaeal community, their diversity, and structure. The 16S rRNA gene sequence analysis is also commonly conducted to understand the microbial community changes as consequence of the environmental disturbances. General workflow for amplicon analysis is divided into four main steps consists of:
+The analysis of 16S rRNA gene sequences is needed to investigate bacterial and archaeal community, their diversity, and structure. The 16S rRNA gene sequence analysis is also commonly conducted to understand the microbial community changes as consequence of the environmental disturbances. General workflow for amplicon analysis is divided into three main steps consists of:
 ### 1. Data Pretreatment 
 Data pretreatment consists of multi-step proccesses including:
 1. <i>Merging paired-end reads</i>. 
@@ -92,8 +92,7 @@ Operational taxonomic unit (OTU) is cluster or group of similar sequence variant
 2. <i>Taxonomy assignment (classifying)</i>.
 Taxonomic classification of OTU representatives into seven levels (Domain, Phylum, Class, Order, Family, Genus, Species) can be conducted by alignment against a 16S rRNA gene reference database such as RDP, SILVA database, GreenGenes.
 3.  We will provide an OTU table for you for this exercise.
-### 3. Data diversity analysis & visualization (alpha & beta diversity, multivariate analyses, barplot/heatmap etc.)
-### 4. OTU occupancy & co-occurence analyses.
+### 3. Ecological Analyses (alpha & beta diversity, multivariate analysis, data visualization, etc.)
 Data pretreatment and OTU table construction can be conducted using different pipelines/platforms. There are several platforms that can be used for amplicon analysis such as [QIIME](http://qiime.org/tutorials/index.html), [mothur](https://mothur.org/wiki/MiSeq_SOP), [USEARCH](https://www.drive5.com/usearch/manual/uparse_pipeline.html), and the [RDPipeline](http://pyro.cme.msu.edu)(Ribosomal Database Project Pipeline). Some of those platforms such as QIIME and mothur also can be used to do diversity analyses and some data visualization. However, it is much better and more flexible to do ecological analyses (e.g. microbial diversity, occupancy) using ecological packages (vegan, Phyloseq, microbiome) on R. The figure below will help you to understand the workflow of sequence analysis in general.
 ![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/Workflow_image.png)
 
@@ -101,33 +100,37 @@ Data pretreatment and OTU table construction can be conducted using different pi
 Form into CATME teams and gather together in the class room. Have at least one laptop with wireless connection amongst you, with Excel and a web browser open.
 We will use paired-end of 16S rRNA gene sequences that have been downloaded from NCBI, SRA as described previously. There are three pairs of fastQ files (six sequence fastQ files in total) that were compressed into one .tar file. 
 
-### Go to http://rdp.cme.msu.edu/tutorials/workflows/16S_supervised_flow.html to observe the 16S supervised workflow of RDP's pipeline 
+### Go to this [link](http://rdp.cme.msu.edu/tutorials/workflows/16S_supervised_flow.html) to observe the 16S supervised workflow of RDP's pipeline 
 To get more info of the RDPipeline, you can go to the [website](http://pyro.cme.msu.edu)
 
 ### The RDPipeline Processing Steps:
-#### Step 1. Initial Processing (Assemble Paired End Reads)
+#### Step 1. Initial Processing–[Assemble Paired End Reads](http://rdp.cme.msu.edu/tutorials/init_process/RDPtutorial_INITIAL-PROCESS_pe.html)
 The initial processing of RDPipeline contains multi-steps process and quality filtering including sorting the raw reads by sample tag, trimming off tag and primer regions, and removing low quality sequences (Cole et al. 2014). It also uses a tool called Assembler to assembly the paired-end reads (Cole et al. 2014).
-1. Use the fastQ files of 16S rRNA gene sequence data that have been downloaded as the input fastQ files
-2. Go to https://pyro.cme.msu.edu/login.spr (you don't need to login or make an account) and hit "TEST DRIVE" button.
+1. Use the fastQ files of 16S rRNA gene sequence data that have been downloaded from D2L as the input fastQ files
+2. Go to this [link](https://pyro.cme.msu.edu/init/form.spr)
 3. Upload the .tar file to the initial processing tool main page: https://pyro.cme.msu.edu/init/form.spr
-4. Fill the initial processing form. The forward primer(s) or reverse primer(s) are not required. 
-Job name = use any name
+4. Fill the initial processing form. The taq file and forward primer(s) or reverse primer(s) are not required. 
+Job name = use any name that you want.
 Max number of N's = 0 (number of ambiguous base allowed)
 Min Read Q score = 27 (minimum Phred score used)
 Min sequence length = 250
 Max sequence length = 280
 5. Make sure to check the box "Assemble paired end reads". 
-6. Hit "Perform Initial Processing" button and wait for a while.
+6. Hit "Perform Initial Processing" button and wait for a while (be patient..).
 7. Check if your job is still running or complete by hitting "my jobs" tab on the right corner of the window.
 8. Download the output file once the job is complete.
-9. Inspect your output data by looking at the output file: http://rdp.cme.msu.edu/tutorials/init_process/RDPtutorial_INITIAL-PROCESS_pe.html
+9. Inspect your output data by looking at the output file [example](http://rdp.cme.msu.edu/tutorials/init_process/RDPtutorial_INITIAL-PROCESS_pe.html)
+10. The folder "assembled_paired_end_sequences" contains the assembled paired sequences in fastQ format. You can choose to use the assembled fastQ files from directory "assembled_paired_end_sequences" if you need to work with sequences from one pair of input only. You also can use *NoTag_trimmed.fastq* file in "NoTaq" folder if you want to run the RDP Classifier in one time, but it will take a very long time.
 
 #### Step 2. Taxonomic Classification Using RDP Classifier
-Open the RDP Classifier at https://pyro.cme.msu.edu/classifier/form.spr and inspect it. Toggle on the Classifier tab and inspect it. “Run” the classifier with each of the three files by attaching the text file as the procedure indicates, and uploading. Wait for the output. Examine the output for dominant and rare taxa. Capture the output in a text file and dump it to Excel. Sort the file again by “Phylum” to capture the frequency of matches to Phylum. SAVE THE THREE CLASSIFICATIONS IN AN EXCEL FILE USING PHYLUM AS THE IDENTIFIER.
+1. Open the [RDP Classifier](http://rdp.cme.msu.edu/tutorials/classifier/classifer_cover_page.html) and inspect it. We will not run RDP Classifier interactively because our data are more than 50 MB. Instead, we will run RDP Classifier on RDPipeline (number 2).
+2. Open this [link](http://rdp.cme.msu.edu/tutorials/classifier/RDPtutorial_CLASSIFIER.html) to get you familiar with the tool. 
+3. Upload each of your assembled fastQ file in this [link](https://pyro.cme.msu.edu/classifier/form.spr). Wait for the output. 4. Examine the output for dominant and rare taxa. Capture the output in a text file and dump it to Excel. Sort the file again by “Phylum” to capture the frequency of matches to Phylum. SAVE THE THREE CLASSIFICATIONS IN AN EXCEL FILE USING PHYLUM AS THE IDENTIFIER AND ANSWER THESE QUESTIONS BELOW:
 1.  What is the most common taxon at the Phylum level, for each sample? 
 2.  What is the rarest taxon at the Phylum level, for each sample?
 3.  Make a stacked bar chart. Compare:  How does the phylum-level composition vary by soil temperature and fire impact?
 4.  Make a hypothesis to explain why particular phyla are found in particular sites.  Hint: use the environmental data provided above, and then use the internet and other references to look up the requirements of the most abundant phyla and use that information to inform your hypothesis.  Make sure that you make a statement explaining the phylum distributions for each sample. 
+
 ***Fina will find directions from Keara for stacked bar chart and insert them here**
 
 ### Step 3. Making a Species Abundance Distribution to assess evenness.
@@ -142,7 +145,7 @@ The interpretation of this statement is that if the contents in the cell are gre
 1.  What is the richness for each sample?  Which sample has the highest richness?  Which has the lowest? 
 2.  Hypothesize as to what drives the richness pattern that you observe.  What about the environment or ecology would lead to this pattern?
 
-### Step 6. Make the final report
+### Step 5. Make the final report
 Make your final report in word document. The final report should be turned in (one per team) on D2L.  The content should include: 
 1.  Introduction:  summarize and synthesize your background reading on the Centralia environment and unique expectations of its microbial ecology.  THis should be 2-3 paragraphs.  Use the references provided on D2L, but you are welcome to find additional references.  
 2.  Results.  Use the headings above for steps 1-4 and answer each question in full sentences. Insert any charts and figures into the report.  
