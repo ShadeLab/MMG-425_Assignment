@@ -48,7 +48,7 @@ The first command will give you the SRA file according to the SRR number. The fi
 The second command will splits paired reads into two separate fastQ files: *_1.fastq and *_2.fastq.
 
 ### Getting familiar with 16S rRNA sequence data file format: the FastQ File
-<i>Background</i> 
+<i>Background</i>. 
 FastQ file is a text file that contains the sequence data generated from the Ilumina sequencing technology. The fastQ file contains four lines as the example of the original FastQ file below. For FastQ file structure, read this [link](https://en.wikipedia.org/wiki/FASTQ_format)
 ```
 @HWI-M03127:41:ACE13:1:1101:15519:1371 1:N:0:GTATGCGCTGTA
