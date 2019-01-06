@@ -26,17 +26,14 @@ One of the projects in Dr. Shade's lab is Centralia. It is an underground coalmi
 
 ![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/centralia_map.png)
 
-Raw 16S rRNA gene sequences that were obtained from the RTSF, MSU sequencing facility, were submitted to the National Center for Biotechnology Information (NCBI) and they are available in NCBI’s Sequence Read Archive (SRA).
-The Sequence Read Archive (SRA) is an international bioinformatics database that stores raw sequencing data and alignment information from high-throughput sequencing platforms such as Ilumina MiSeq and it is established under International Nucleotide Sequence Database Collaboration (INSDC). To know more the SRA overview, please see this [link](https://www.ncbi.nlm.nih.gov/sra/docs/). Here, you will also learn how to download the raw sequence data from NCBI, SRA by following the steps below.
-
+The Raw 16S rRNA gene sequences that were obtained from the Research Technology Support Activity (RTSF), MSU sequencing facility, were submitted to the National Center for Biotechnology Information (NCBI) and they are available in NCBI’s Sequence Read Archive (SRA).
+The Sequence Read Archive (SRA) is an international bioinformatics database that stores raw sequencing data and alignment information from high-throughput sequencing platforms such as Ilumina MiSeq and it is established under International Nucleotide Sequence Database Collaboration (INSDC). To know more the SRA overview, please see this [link](https://www.ncbi.nlm.nih.gov/sra/docs/). 
+Here, you will also learn how to download the raw sequence data from NCBI, SRA by following the steps below.
 ### How to fetch your raw sequence data from NCBI Sequence Read Archive (SRA)
 1. Go to this [link](https://www.ncbi.nlm.nih.gov/sra/SRP082686).
-2. There are 54 items and those are raw 16S rRNA gene amplicon sequencing data from Centralia coal mine surface soil consist of 18 different sites and three replicates for each site. Pick three data set, number 1, 8, and 12.
-(1) C04_05102014_R1_D01_GTATGCGCTGTA_L001_R1_001 represent Recovered site
-(8) C17_06102014_R1_D03_CTAGCGAACATC_L001_R1_001 represent Reference site
-(12) C16_06102014_R1_D03_ACGCCACGAATG_L001_R1_001 represent Fire Affected site
+2. There are 54 items and those are raw 16S rRNA gene amplicon sequencing data from Centralia coal mine surface soil consist of 18 different sites and three replicates for each site. Pick the data that you want to download. For example, number 1. C04D01_GTATGCGCTGTA_L001_R1_001
 3. Click the item and you will see the information about the sequence.
-4. Click the accession/SRR number under "Run" tab (for example: SRR4054183). 
+4. Click the SRR number under "Run" tab (for example: SRR4054183). 
 5. Go to "Download" tab and hit "SRA Toolkit" to download SRA Toolkit. The SRA Toolkit is needed to download the sequence and split the paired-ends reads into two fastQ files.
 6. Download the toolkit version 2.9.2 according to your computer spec.
 7. Extract the .tar file in your local computer (for example: sratoolkit.2.9.2-mac64.tar) then put the extracted file in the directory you want.
@@ -45,14 +42,12 @@ The Sequence Read Archive (SRA) is an international bioinformatics database that
 10. Download raw sequence of interest and convert the SRA file into fastQ file by running the two commands below:
 ```
 sratoolkit.2.9.2-mac64/bin/./prefetch <SRRnumber>
-sratoolkit.2.9.2-mac64/bin/./fastq-dump --origfmt -I --split-3 <SRRnumber>
+sratoolkit.2.9.2-mac64/bin/./fastq-dump --skip technical -I --split-3 <SRRnumber>
 ```
 The first command will give you the SRA file according to the SRR number. The file is located in the ncbi file in your home directory (for example: SRR4054183.sra).
 The second command will splits paired reads into two separate fastQ files: *_1.fastq and *_2.fastq.
-11. Use these fastQ files as the input for the next sequence analysis using RDP's Pipeline.
 
-### Getting familiar with 16S rRNA sequence data file format:  the FastQ File
-
+### Getting familiar with 16S rRNA sequence data file format: the FastQ File
 <i>Background</i> 
 FastQ file is a text file that contains the sequence data generated from the Ilumina sequencing technology. The fastQ file contains four lines as the example of the original FastQ file below. For FastQ file structure, read this [link](https://en.wikipedia.org/wiki/FASTQ_format)
 ```
@@ -69,9 +64,11 @@ TACGAGGGGGGCAAGCGTTGTTCGGAATTATTGGGCGTAAAGGGAGCGTAGGCGGTTCGGTAAGTCACTTGTGAAATCTC
 +SRR4054183.1.1 1 length=150
 BBBBABBBBBBBGFFGGFGGGGHGGEFFHFHHHHHGFGGDHGHGGGGGGGGGHGGGGGGGGHGHHHHHHHHHHGGHGHHHHHHGHHHGHGHHHHHGHHGGGGGGGGGGGGGGGGGGGGFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 ```
+**note**: The difference format of the original fastQ files and those downloaded from the SRA results in the incompatibility issue for sequence analysis using RDP pipeline. Thus, we will provide you the original fastQ files from Centralia samples (C04, C13, C17) as the input for the next sequence analysis using RDP's Pipeline. There are three paired-end reads (R1 and R2) or six fastQ files compressed into one .tar file that you can download from the D2L.
+
 ## GENERAL WORKFLOW FOR SEQUENCE ANALYSIS
 
-<i>Background</i> 
+<i>Background</i>
 The analysis of 16S rRNA gene sequences is needed to investigate bacterial and archaeal community, their diversity, and structure. The 16S rRNA gene sequence analysis is also commonly conducted to understand the microbial community changes as consequence of the environmental disturbances. General workflow for amplicon analysis is divided into four main steps consists of:
 ### 1. Data Pretreatment 
 Data pretreatment consists of multi-step proccesses including:
