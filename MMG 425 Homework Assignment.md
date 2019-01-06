@@ -68,7 +68,7 @@ BBBBABBBBBBBGFFGGFGGGGHGGEFFHFHHHHHGFGGDHGHGGGGGGGGGHGGGGGGGGHGHHHHHHHHHHGGHGHHH
 
 ## GENERAL WORKFLOW FOR SEQUENCE ANALYSIS
 
-<i>Background</i>
+<i>Background</i>.
 The analysis of 16S rRNA gene sequences is needed to investigate bacterial and archaeal community, their diversity, and structure. The 16S rRNA gene sequence analysis is also commonly conducted to understand the microbial community changes as consequence of the environmental disturbances. General workflow for amplicon analysis is divided into three main steps consists of:
 ### 1. Data Pretreatment 
 Data pretreatment consists of multi-step proccesses including:
@@ -104,28 +104,29 @@ We will use paired-end of 16S rRNA gene sequences that have been downloaded from
 To get more info of the RDPipeline, you can go to the [website](http://pyro.cme.msu.edu)
 
 ### The RDPipeline Processing Steps:
-#### Step 1. Initial Processing–[Assemble Paired End Reads](http://rdp.cme.msu.edu/tutorials/init_process/RDPtutorial_INITIAL-PROCESS_pe.html)
-The initial processing of RDPipeline contains multi-steps process and quality filtering including sorting the raw reads by sample tag, trimming off tag and primer regions, and removing low quality sequences (Cole et al. 2014). It also uses a tool called Assembler to assembly the paired-end reads (Cole et al. 2014).
-1. Use the fastQ files of 16S rRNA gene sequence data that have been downloaded from D2L as the input fastQ files
-2. Go to this [link](https://pyro.cme.msu.edu/init/form.spr)
-3. Upload the .tar file to the initial processing tool main page: https://pyro.cme.msu.edu/init/form.spr
+#### Step 1. Initial Processing–Assemble Paired End Reads
+The initial processing of RDPipeline contains multi-steps process and quality filtering including sorting the raw reads by sample tag, trimming off tag and primer regions, and removing low quality sequences (Cole et al. 2014). It also uses a tool called Assembler to assembly the paired-end reads (Cole et al. 2014). Go to this [link]((http://rdp.cme.msu.edu/tutorials/init_process/RDPtutorial_INITIAL-PROCESS_pe.html) to get you familiar with the tool.
+1. Use the fastQ files of 16S rRNA gene sequence data that have been downloaded from D2L as the input fastQ files.
+2. Go to this [link](https://pyro.cme.msu.edu/init/form.spr).
+3. Upload the .tar file to the initial processing tool [main page](https://pyro.cme.msu.edu/init/form.spr).
 4. Fill the initial processing form. The taq file and forward primer(s) or reverse primer(s) are not required. 
 Job name = use any name that you want.
-Max number of N's = 0 (number of ambiguous base allowed)
-Min Read Q score = 27 (minimum Phred score used)
-Min sequence length = 250
-Max sequence length = 280
+Max number of N's = 0 (number of ambiguous base allowed).
+Min Read Q score = 27 (minimum Phred score used).
+Min sequence length = 250.
+Max sequence length = 280.
 5. Make sure to check the box "Assemble paired end reads". 
 6. Hit "Perform Initial Processing" button and wait for a while (be patient..).
 7. Check if your job is still running or complete by hitting "my jobs" tab on the right corner of the window.
 8. Download the output file once the job is complete.
-9. Inspect your output data by looking at the output file [example](http://rdp.cme.msu.edu/tutorials/init_process/RDPtutorial_INITIAL-PROCESS_pe.html)
+9. Inspect your output data by looking at the output file [example](http://rdp.cme.msu.edu/tutorials/init_process/RDPtutorial_INITIAL-PROCESS_pe.html).
 10. The folder "assembled_paired_end_sequences" contains the assembled paired sequences in fastQ format. You can choose to use the assembled fastQ files from directory "assembled_paired_end_sequences" if you need to work with sequences from one pair of input only. You also can use *NoTag_trimmed.fastq* file in "NoTaq" folder if you want to run the RDP Classifier in one time, but it will take a very long time.
 
 #### Step 2. Taxonomic Classification Using RDP Classifier
 1. Open the [RDP Classifier](http://rdp.cme.msu.edu/tutorials/classifier/classifer_cover_page.html) and inspect it. We will not run RDP Classifier interactively because our data are more than 50 MB. Instead, we will run RDP Classifier on RDPipeline (number 2).
 2. Open this [link](http://rdp.cme.msu.edu/tutorials/classifier/RDPtutorial_CLASSIFIER.html) to get you familiar with the tool. 
-3. Upload each of your assembled fastQ file in this [link](https://pyro.cme.msu.edu/classifier/form.spr). Wait for the output. 4. Examine the output for dominant and rare taxa. Capture the output in a text file and dump it to Excel. Sort the file again by “Phylum” to capture the frequency of matches to Phylum. SAVE THE THREE CLASSIFICATIONS IN AN EXCEL FILE USING PHYLUM AS THE IDENTIFIER AND ANSWER THESE QUESTIONS BELOW:
+3. Upload each of your assembled fastQ file in this [link](https://pyro.cme.msu.edu/classifier/form.spr) and wait for the output. 
+4. Examine the output for dominant and rare taxa. Capture the output in a text file and dump it to Excel. Sort the file again by “Phylum” to capture the frequency of matches to Phylum. SAVE THE THREE CLASSIFICATIONS IN AN EXCEL FILE USING PHYLUM AS THE IDENTIFIER AND ANSWER THESE QUESTIONS BELOW:
 1.  What is the most common taxon at the Phylum level, for each sample? 
 2.  What is the rarest taxon at the Phylum level, for each sample?
 3.  Make a stacked bar chart. Compare:  How does the phylum-level composition vary by soil temperature and fire impact?
