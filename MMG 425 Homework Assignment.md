@@ -120,12 +120,12 @@ Max sequence length = 280.
 7. Check if your job is still running or complete by hitting "my jobs" tab on the right corner of the window.
 8. Download the output file once the job is complete.
 9. Inspect your output data by looking at the output file [example](http://rdp.cme.msu.edu/tutorials/init_process/RDPtutorial_INITIAL-PROCESS_pe.html).
-10. The folder "assembled_paired_end_sequences" contains the assembled paired sequences in fastQ format. You can choose to use the assembled fastQ files from directory "assembled_paired_end_sequences" if you need to work with sequences from one pair of input only. You also can use *NoTag_trimmed.fastq* file in "NoTaq" folder if you want to run the RDP Classifier in one time, but it will take a very long time.
+10. The output file will contain two folders/directories. First folder "assembled_paired_end_sequences" contains the assembled paired sequences in FASTQ format and the assembled analysis results in (FASTQ.LOG) directly output from the Assembler (first stage), one for each pair of input FASTAQ files. Second, the results of stage 2 that are combined in folder called "NoTag". The *NoTag_trimmed.fastq* file is trimmed sequences that are ready for downstream analysis, such as classification using the RDP Classifier.
 
 #### Step 2. Taxonomic Classification Using RDP Classifier
 1. Open the [RDP Classifier](http://rdp.cme.msu.edu/tutorials/classifier/classifer_cover_page.html) and inspect it. We will not run RDP Classifier interactively because our data are more than 50 MB. Instead, we will run RDP Classifier on RDPipeline (number 2).
-2. Open this [link](http://rdp.cme.msu.edu/tutorials/classifier/RDPtutorial_CLASSIFIER.html) to get you familiar with the tool. 
-3. Upload each of your assembled fastQ file in this [link](https://pyro.cme.msu.edu/classifier/form.spr) and wait for the output. 
+2. Open this [link](http://rdp.cme.msu.edu/tutorials/classifier/RDPtutorial_CLASSIFIER.html) to get you familiar with the tool, input, and output files. 
+3. Upload each of your assembled fastQ file in this [link](https://pyro.cme.msu.edu/classifier/form.spr), select "fixrank" and wait for the output. 
 4. Examine the output for dominant and rare taxa. Capture the output in a text file and dump it to Excel. Sort the file again by “Phylum” to capture the frequency of matches to Phylum. SAVE THE THREE CLASSIFICATIONS IN AN EXCEL FILE USING PHYLUM AS THE IDENTIFIER AND ANSWER THESE QUESTIONS BELOW:
 1.  What is the most common taxon at the Phylum level, for each sample? 
 2.  What is the rarest taxon at the Phylum level, for each sample?
