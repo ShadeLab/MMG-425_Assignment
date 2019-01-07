@@ -132,8 +132,6 @@ Max sequence length = 280.
 3.  Make a stacked bar chart. Compare:  How does the phylum-level composition vary by soil temperature and fire impact?
 4.  Make a hypothesis to explain why particular phyla are found in particular sites.  Hint: use the environmental data provided above, and then use the internet and other references to look up the requirements of the most abundant phyla and use that information to inform your hypothesis.  Make sure that you make a statement explaining the phylum distributions for each sample. 
 
-***Fina will find directions from Keara for stacked bar chart and insert them here**
-
 ### Step 3. Making a Species Abundance Distribution to assess evenness.
 Use the provided OTU table (there should be 3 columns one for each sample) for this step.  First, sum the total abundance for each OTU.  OTUs are in ROWS, so make a new column of row sums in excel.  Then, sort from high to low.  
 1.  From these data, construct a Species Abundance Distribution (also sometimes called a ranked abundance curve). Remember that the x-axis is the ranked taxa from most to least abundant, and the y-axis is the abundance.  Save the chart for the lab report.
