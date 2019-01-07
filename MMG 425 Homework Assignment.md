@@ -106,10 +106,29 @@ To get more info of the RDPipeline, you can go to the [website](http://pyro.cme.
 ### The RDPipeline Processing Steps:
 #### Step 1. Initial Processing–Assemble Paired End Reads
 The initial processing of RDPipeline contains multi-steps process and quality filtering including sorting the raw reads by sample tag, trimming off tag and primer regions, and removing low quality sequences (Cole et al. 2014). It also uses a tool called Assembler to assembly the paired-end reads (Cole et al. 2014). Go to this [link]((http://rdp.cme.msu.edu/tutorials/init_process/RDPtutorial_INITIAL-PROCESS_pe.html) to get you familiar with the tool.
-1. Use the fastQ files of 16S rRNA gene sequence data that have been downloaded from D2L as the input fastQ files.
+1. Use the fastQ files of 16S rRNA gene sequence data from 3 samples (C04, C13, and C17) that have been downloaded from D2L as the input fastQ files. Open the ".tar" file. There are 6 fastQ files (one pairs from each sample).
+```
+C04_05102014_R1_D01_GTATGCGCTGTA_L001_R1_001.fastq
+C04_05102014_R1_D01_GTATGCGCTGTA_L001_R2_001.fastq
+C13_06102014_R2_D10_CGCAGCGGTATA_L001_R1_001.fastq
+C13_06102014_R2_D10_CGCAGCGGTATA_L001_R2_001.fastq
+C17_06102014_R1_D01_GGCCACGTAGTA_L001_R1_001.fastq
+C17_06102014_R1_D01_GGCCACGTAGTA_L001_R2_001.fastq
+```
+2. Compile each pair into one ".tar" file so you will have three ".tar" file that you will upload one by one. How to make ".tar" file using command line:
+a. open your terminal.
+b. path into where you put your fastQ files and type:
+```
+tar -cvf *name*.tar *your fastq files*
+
+for example:
+tar -cvf CO4.tar C04_05102014_R1_D01_GTATGCGCTGTA_L001_R1_001.fastq C04_05102014_R1_D01_GTATGCGCTGTA_L001_R2_001.fastq
+
+will give you C04.tar file that contains those two fastq files.
+```
 2. Go to this [link](https://pyro.cme.msu.edu/init/form.spr).
-3. Upload the .tar file to the initial processing tool [main page](https://pyro.cme.msu.edu/init/form.spr).
-4. Fill the initial processing form. The taq file and forward primer(s) or reverse primer(s) are not required. 
+3. Upload each of your ".tar" file to the initial processing tool [main page](https://pyro.cme.msu.edu/init/form.spr).
+4. Fill the initial processing form. The forward primer(s) or reverse primer(s) are not required because primer are already removed from these sequences. 
 Job name = use any name that you want.
 Max number of N's = 0 (number of ambiguous base allowed).
 Min Read Q score = 27 (minimum Phred score used).
