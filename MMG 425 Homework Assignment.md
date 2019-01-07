@@ -31,7 +31,7 @@ The Sequence Read Archive (SRA) is an international bioinformatics database that
 Here, you will also learn how to download the raw sequence data from NCBI, SRA by following the steps below.
 ### How to fetch your raw sequence data from NCBI Sequence Read Archive (SRA)
 1. Go to this [link](https://www.ncbi.nlm.nih.gov/sra/SRP082686).
-2. There are 54 items and those are raw 16S rRNA gene amplicon sequencing data from Centralia coal mine surface soil consist of 18 different sites and three replicates for each site. Pick the data that you want to download. For example, number 1. C04D01_GTATGCGCTGTA_L001_R1_001
+2. There are 54 items and those are raw 16S rRNA gene amplicon sequencing data from Centralia coal mine surface soil consist of 18 different sites and three replicates for each site. Pick the data that you want to download. For example, number 1. [C04D01_GTATGCGCTGTA_L001_R1_001](https://www.ncbi.nlm.nih.gov/sra/SRX2043754[accn]).
 3. Click the item and you will see the information about the sequence.
 4. Click the SRR number under "Run" tab (for example: SRR4054183). 
 5. Go to "Download" tab and hit "SRA Toolkit" to download SRA Toolkit. The SRA Toolkit is needed to download the sequence and split the paired-ends reads into two fastQ files.
