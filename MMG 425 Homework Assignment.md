@@ -45,7 +45,7 @@ sratoolkit.2.9.2-mac64/bin/./prefetch <SRRnumber>
 sratoolkit.2.9.2-mac64/bin/./fastq-dump --skip technical -I --split-3 <SRRnumber>
 ```
 The first command will give you the SRA file according to the SRR number. The file is located in the ncbi file in your home directory (for example: SRR4054183.sra).
-The second command will splits paired reads into two separate fastQ files: *_1.fastq and *_2.fastq.
+The second command will splits paired reads into two separate fastQ files: *_1.fastq and *_2.fastq*.
 
 ### Getting familiar with 16S rRNA sequence data file format: the FastQ File
 <i>Background</i>. 
