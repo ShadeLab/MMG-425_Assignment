@@ -156,7 +156,7 @@ Max sequence length = 280.
 1. Open the [RDP Classifier](http://rdp.cme.msu.edu/tutorials/classifier/classifer_cover_page.html) and inspect it. We will not run RDP Classifier interactively because our data are more than 50 MB. Instead, we will run RDP Classifier on RDPipeline (number 2).
 2. Open this [link](http://rdp.cme.msu.edu/tutorials/classifier/RDPtutorial_CLASSIFIER.html) to get you familiar with the tool, input, and output files. 
 3. Upload the *NoTag_trimmed.fastq* file in this [link](https://pyro.cme.msu.edu/classifier/form.spr), select "fixrank" and wait for the output. 
-4. Examine the output for dominant and rare taxa. Capture the output in a text file and dump it to Excel. Sort the file again by “Phylum” to capture the frequency of matches to Phylum. SAVE THE THREE CLASSIFICATIONS IN AN EXCEL FILE USING PHYLUM AS THE IDENTIFIER AND ANSWER THESE QUESTIONS BELOW:
+4. Examine the output for dominant and rare taxa. Capture the "hierarchy.txt" file and dump it to Excel. Sort the file again by “Phylum” to capture the frequency of matches to Phylum. SAVE THE THREE CLASSIFICATIONS IN AN EXCEL FILE USING PHYLUM AS THE IDENTIFIER AND ANSWER THESE QUESTIONS BELOW:
 1.  What is the most common taxon at the Phylum level, for each sample? 
 2.  What is the rarest taxon at the Phylum level, for each sample?
 3.  Make a stacked bar chart. Make a stacked bar for each sample, so you will have three stacked bar in one chart. See the [example](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/Phylum_level_composition.png). Compare:  How does the phylum-level composition vary by soil temperature and fire impact?
