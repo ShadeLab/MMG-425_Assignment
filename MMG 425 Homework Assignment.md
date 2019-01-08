@@ -116,7 +116,7 @@ To read up about the RDPipeline, you can go to the [website](http://pyro.cme.msu
 
 ### The RDPipeline Processing Steps:
 #### Step 1. Initial Processing–Assemble Paired End Reads
-The initial processing of RDPipeline contains multi-steps process and quality filtering including sorting the raw reads by sample tag, trimming off tag and primer regions, and removing low quality sequences (Cole et al. 2014). It also uses a tool called Assembler to assembly the paired-end reads (Cole et al. 2014). Go to this [link]((http://rdp.cme.msu.edu/tutorials/init_process/RDPtutorial_INITIAL-PROCESS_pe.html) to get you familiar with the tool.
+The initial processing of RDPipeline contains multi-steps process and quality filtering including sorting the raw reads by sample tag, trimming off tag and primer regions, and removing low quality sequences (Cole et al. 2014). It also uses a tool called Assembler to assembly the paired-end reads (Cole et al. 2014). Go to this [link](http://rdp.cme.msu.edu/tutorials/init_process/RDPtutorial_INITIAL-PROCESS_pe.html) to get you familiar with the tool.
 1. Use the fastQ files of 16S rRNA gene sequence data from 3 samples (C04, C13, and C17) that have been downloaded from D2L as the input fastQ files. Open the ".tar" file. There are 6 fastQ files (one pairs from each sample).
 ```
 C04_05102014_R1_D01_GTATGCGCTGTA_L001_R1_001.fastq
