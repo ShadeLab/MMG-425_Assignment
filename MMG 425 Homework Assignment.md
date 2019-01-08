@@ -1,6 +1,6 @@
 # MMG 425 HOMEWORK ASSIGNMENT, SPRING SEMESTER 2019
 
-## LEARNING OBJECTIVE
+## LEARNING OBJECTIVES
 
 1. Understand the general process of microbial community analysis using 16S rRNA gene sequence data.  We will use the sequence analysis tools from the Ribosomal Database Project (RDP).
 2. Familiarize with sequence respositories (where to find and download real data), what "raw" sequence data looks like, and generally how to manipulate these data for analysis using online tools and local worksheets. 
