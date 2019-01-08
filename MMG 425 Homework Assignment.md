@@ -45,7 +45,7 @@ Here, you will also learn how to download the raw sequence data from NCBI, SRA b
 5. Go to "Download" tab and hit "SRA Toolkit" to download SRA Toolkit. The SRA Toolkit is needed to download the sequence and split the paired-ends reads into two fastQ files.
 6. Download the toolkit version 2.9.2 according to your computer spec.
 7. Extract the .tar file in your local computer (for example: sratoolkit.2.9.2-mac64.tar) then put the extracted file in the directory you want.
-8. Open the Terminal in your mac (or any command line program that you can install and use for Windows, such as MobaXterm). The app is in the Utilities folder in Applications.
+8. Open the Terminal in your mac (or any command line program that you can install and use for Windows, such as [MobaXterm](https://mobaxterm.mobatek.net/)). The app is in the Utilities folder in Applications.
 9. Path to the directory where you put the sratoolkit file.
 10. Download raw sequence of interest and convert the SRA file into fastQ file by running the two commands below:
 ```
@@ -72,7 +72,7 @@ TACGAGGGGGGCAAGCGTTGTTCGGAATTATTGGGCGTAAAGGGAGCGTAGGCGGTTCGGTAAGTCACTTGTGAAATCTC
 +SRR4054183.1.1 1 length=150
 BBBBABBBBBBBGFFGGFGGGGHGGEFFHFHHHHHGFGGDHGHGGGGGGGGGHGGGGGGGGHGHHHHHHHHHHGGHGHHHHHHGHHHGHGHHHHHGHHGGGGGGGGGGGGGGGGGGGGFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 ```
-**note**: The difference format of the original fastQ files and those downloaded from the SRA results in the incompatibility issue for sequence analysis using RDP pipeline. Thus, we will provide you the original fastQ files from Centralia samples (C04, C13, C17) as the input for the next sequence analysis using RDP's Pipeline. There are three paired-end reads (R1 and R2) or six fastQ files compressed into one .tar file that you can download from the D2L.
+**note**: The different format of the original fastQ files and those downloaded from the SRA results in a incompatibility issue for sequence analysis using RDP pipeline. Thus, we will provide you the original fastQ files from Centralia samples (C04, C13, C17) as the input for the next sequence analysis using RDP's Pipeline. There are three paired-end reads (R1 and R2) or six fastQ files compressed into one centralia.tar file that you can download from the D2L.
 
 ## GENERAL WORKFLOW FOR SEQUENCE ANALYSIS
 
