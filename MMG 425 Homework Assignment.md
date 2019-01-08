@@ -12,11 +12,13 @@
 
 1. Raw 16S rRNA gene sequence data set from coal mine fire affected soil samples of Centralia.
 2. Access to the Ribosomal Database II Project website. 
-3. Laptops with wireless connection capability.
-4. Spreadsheet and graphics software such as Excel.
+3. Spreadsheet and graphics software such as Excel.
+4. References about microbes in fire-affected soils and Centralia (available on D2L).
 
 ### Getting familiar with the dataset: The Centralia underground coal mine fire!
-One of the projects in Dr. Shade's lab is Centralia. It is an underground coalmine fire in Pennsylvania that has been burning since 1962. The objective of the project is to investigate the impact of an extreme and long-term thermal disturbance on soil microbial communities. The soil samples were taken and classified into three different types: Fire Affected, Recovered, and Reference. Amplification and sequencing of 16S rRNA gene was conducted from those soil samples to identify the bacterial and archaeal communities. The table below shows the characteristic of the soil and environmental condition of the three sites where the three samples were taken. The map describes the exact location of the sampling sites in Centralia.
+One of the microbial ecosystems studied by Dr. Shade's lab is Centralia, Pennsylvania. Centralia is the site of an underground coalmine fire that has been burning very slowly along the coal seams since 1962. We study the soils overlying the fire, which are exposed to extreme heat (temperatures have been recorded as hot as 300C! More recently the hottest temperatures are 50-60 C). The objective of our research project is to investigate the impact of an extreme (think: sledgehammer!) and long-term thermal disturbance on soil microbial communities. We use this unusual ecosystem as a model to understand microbial community resilience and stability.  
+
+Surface soil cores (overlying the coal seams) were collected in 2014, and classified into three different types according to the fire impact: Fire Affected, Recovered, and Reference. Amplification and high-throughput Illumina sequencing of 16S rRNA gene was conducted from those soil samples to identify the bacterial and archaeal communities. The table below shows the characteristic of the soil and environmental conditions of three sites. The map describes the exact location of the sampling sites in Centralia.
 
 | Sample ID | Soil temperature | Classification | Organic matter | pH | NO3N (ppm) | NH4N (ppm) | Sulfate/Sulfur (ppm) | Arsenic (ppm) | Soil moisture |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
