@@ -77,7 +77,10 @@ BBBBABBBBBBBGFFGGFGGGGHGGEFFHFHHHHHGFGGDHGHGGGGGGGGGHGGGGGGGGHGHHHHHHHHHHGGHGHHH
 ## GENERAL WORKFLOW FOR SEQUENCE ANALYSIS
 
 <i>Background</i>.
-The analysis of 16S rRNA gene sequences is needed to investigate bacterial and archaeal community, their diversity, and structure. The 16S rRNA gene sequence analysis is also commonly conducted to understand the microbial community changes as consequence of the environmental disturbances. General workflow for amplicon analysis is divided into three main steps consists of:
+The analysis of 16S rRNA gene sequences is needed to investigate bacterial and archaeal community, their diversity, and structure. The 16S rRNA gene sequence analysis is also commonly conducted to understand the microbial community changes as consequence of the environmental disturbances. 
+The figure below will help you to understand the general workflow of microbiome amplicon sequence analysis.
+![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/Workflow_image.png)
+
 ### 1. Data Pretreatment 
 Data pretreatment consists of multi-step proccesses including:
 1. <i>Merging paired-end reads</i>. 
@@ -100,16 +103,16 @@ Operational taxonomic unit (OTU) is cluster or group of similar sequence variant
 2. <i>Taxonomy assignment (classifying)</i>.
 Taxonomic classification of OTU representatives into seven levels (Domain, Phylum, Class, Order, Family, Genus, Species) can be conducted by alignment against a 16S rRNA gene reference database such as RDP, SILVA database, GreenGenes.
 3.  We will provide an OTU table for you for this exercise.
-### 3. Ecological Analyses (alpha & beta diversity, multivariate analysis, data visualization, etc.)
-Data pretreatment and OTU table construction can be conducted using different pipelines/platforms. There are several platforms that can be used for amplicon analysis such as [QIIME](http://qiime.org/tutorials/index.html), [mothur](https://mothur.org/wiki/MiSeq_SOP), [USEARCH](https://www.drive5.com/usearch/manual/uparse_pipeline.html), and the [RDPipeline](http://pyro.cme.msu.edu)(Ribosomal Database Project Pipeline). Some of those platforms such as QIIME and mothur also can be used to do diversity analyses and some data visualization. However, it is much better and more flexible to do ecological analyses (e.g. microbial diversity, occupancy) using ecological packages (vegan, Phyloseq, microbiome) on R. The figure below will help you to understand the workflow of sequence analysis in general.
-![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/Workflow_image.png)
+### 3. Ecological Analyses
+1.  There are many programs that can be used to perform diversity analyses and visualization.  A good open-source statistical computing program is R. There are also many custom programs and tools, including QIIME, mothur, MG-RAST, and KBASE.  
+2.  Here, we will use RDP pipeline and also Excel for basic diversity assessments. 
 
-## TUTORIAL FOR 16S rRNA GENE SEQUENCES ANALYSIS USING RDP's PIPELINE
+## TUTORIAL FOR 16S rRNA GENE SEQUENCE ANALYSIS USING RDP's PIPELINE
 Form into CATME teams and gather together in the class room. Have at least one laptop with wireless connection amongst you, with Excel and a web browser open.
 We will use paired-end of 16S rRNA gene sequences that have been downloaded from NCBI, SRA as described previously. There are three pairs of fastQ files (six sequence fastQ files in total) that were compressed into one .tar file. 
 
 ### Go to this [link](http://rdp.cme.msu.edu/tutorials/workflows/16S_supervised_flow.html) to observe the 16S supervised workflow of RDP's pipeline 
-To get more info of the RDPipeline, you can go to the [website](http://pyro.cme.msu.edu)
+To read up about the RDPipeline, you can go to the [website](http://pyro.cme.msu.edu)
 
 ### The RDPipeline Processing Steps:
 #### Step 1. Initial Processing–Assemble Paired End Reads
@@ -157,30 +160,23 @@ Max sequence length = 280.
 1.  What is the most common taxon at the Phylum level, for each sample? 
 2.  What is the rarest taxon at the Phylum level, for each sample?
 3.  Make a stacked bar chart. Make a stacked bar for each sample, so you will have three stacked bar in one chart. See the [example](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/Phylum_level_composition.png). Compare:  How does the phylum-level composition vary by soil temperature and fire impact?
-4.  Make a hypothesis to explain why particular phyla are found in particular sites.  Hint: use the environmental data provided above, and then use the internet and other references to look up the requirements of the most abundant phyla and use that information to inform your hypothesis.  Make sure that you make a statement explaining the phylum distributions for each sample. 
+4.  Make a hypothesis to explain why particular phyla are found in particular sites.  Hint: use the environmental data provided above, and then use the internet and other references to look up the requirements of the most informative phyla and use that information to inform your hypothesis.  Make sure that you make a statement explaining the phylum distributions for each sample. 
 
-### Step 3. Making a Species Abundance Distribution to assess evenness.
+#### Step 3. Making a Species Abundance Distribution to assess evenness.
 Use the provided OTU table (there should be 3 columns one for each sample) for this step.  First, sum the total abundance for each OTU.  OTUs are in ROWS, so make a new column of row sums in excel.  Then, sort from high to low.  
 1.  From these data, construct a Species Abundance Distribution (also sometimes called a ranked abundance curve). Remember that the x-axis is the ranked taxa from most to least abundant, and the y-axis is the abundance.  Save the chart for the lab report.
 2.  Intepret the chart.  What does it tell you about the evenness of the community?
 
-### Step 4.  Assess the richness for each sample.
+#### Step 4.  Assess the richness for each sample.
 Use the provided OTU table for this step.  First, copy the data and paste it into a new sheet. Make a presence-absence table from the data but Finding and Replacing and values > 1 with 1.  Us an IF formula to do so:
 =IF(*cell*>1,1,0)
 The interpretation of this statement is that if the contents in the cell are greater than 1, replace with 1, and if not, replace with zero.  In the end, the zeros (absenses) will remain zeros.  This transformation removes the relative abundance data and provides presence-absence data, but allows for easy plotting of how many new OTUs are observed with increasing sequencing effort. 
 1.  What is the richness for each sample?  Which sample has the highest richness?  Which has the lowest? 
 2.  Hypothesize as to what drives the richness pattern that you observe.  What about the environment or ecology would lead to this pattern?
 
-### Step 5. Make the final report
+#### Step 5. Make the final report
 Make your final report in word document. The final report should be turned in (one per team) on D2L.  The content should include: 
 1.  Introduction:  summarize and synthesize your background reading on the Centralia environment and unique expectations of its microbial ecology.  THis should be 2-3 paragraphs.  Use the references provided on D2L, but you are welcome to find additional references.  
 2.  Results.  Use the headings above for steps 1-4 and answer each question in full sentences. Insert any charts and figures into the report.  
 3.  Conclusions and Future Directions.  Based on your exploration of these sequences, what conclusions can you make about the communities that live in Centralia?  What outstanding hypothese do you have?  What additional sampling or experiments could be done to address these hypotheses?  
 4.  Annotated references.  Use the numeric alphabetica citation format (the same as for the Microbial Ecosystems Project) and annotated in the same way.  
-
-
-
-
-
-
-
