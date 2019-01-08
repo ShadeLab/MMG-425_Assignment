@@ -18,6 +18,8 @@
 ### Getting familiar with the dataset: The Centralia underground coal mine fire!
 One of the microbial ecosystems studied by Dr. Shade's lab is Centralia, Pennsylvania. Centralia is the site of an underground coalmine fire that has been burning very slowly along the coal seams since 1962. We study the soils overlying the fire, which are exposed to extreme heat (temperatures have been recorded as hot as 300C! More recently the hottest temperatures are 50-60 C). The objective of our research project is to investigate the impact of an extreme (think: sledgehammer!) and long-term thermal disturbance on soil microbial communities. We use this unusual ecosystem as a model to understand microbial community resilience and stability.  
 
+A neat aspect of the Centralia ecosystem is that as the fire advances along the coal seams, previously impacted soils can recover to ambient temperatures.  This allows for an informative gradient that can be used to figure out how the soil microbiome changes in response to the fire and then responds after the fire subsides locally.  There are also nearby soils that have never been impacted by the fire, but they share very similar geology so that can be used as a "control" for comparison to what is a typical soil microbiome for the soil around Centralia.  
+
 Surface soil cores (overlying the coal seams) were collected in 2014, and classified into three different types according to the fire impact: Fire Affected, Recovered, and Reference. Amplification and high-throughput Illumina sequencing of 16S rRNA gene was conducted from those soil samples to identify the bacterial and archaeal communities. The table below shows the characteristic of the soil and environmental conditions of three sites. The map describes the exact location of the sampling sites in Centralia.
 
 | Sample ID | Soil temperature | Classification | Organic matter | pH | NO3N (ppm) | NH4N (ppm) | Sulfate/Sulfur (ppm) | Arsenic (ppm) | Soil moisture |
@@ -28,13 +30,17 @@ Surface soil cores (overlying the coal seams) were collected in 2014, and classi
 
 ![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/centralia_map.png)
 
-The Raw 16S rRNA gene sequences that were obtained from the Research Technology Support Activity (RTSF), MSU sequencing facility, were submitted to the National Center for Biotechnology Information (NCBI) and they are available in NCBI’s Sequence Read Archive (SRA).
-The Sequence Read Archive (SRA) is an international bioinformatics database that stores raw sequencing data and alignment information from high-throughput sequencing platforms such as Ilumina MiSeq and it is established under International Nucleotide Sequence Database Collaboration (INSDC). To know more the SRA overview, please see this [link](https://www.ncbi.nlm.nih.gov/sra/docs/). 
+The Raw 16S rRNA gene sequences that were obtained from Michigan State's Research Technology Support Facility (RTSF) Genomics Core, here on campus! After data were generated and published, they were made public by submitting them to the National Center for Biotechnology Information (NCBI) Sequence Read Archive (SRA). 
+
+The Sequence Read Archive (SRA) is an international data repository that stores raw sequencing data and alignment information from high-throughput sequencing platforms (e.g., Illumina MiSeq, HiSeq).  SRA is established under International Nucleotide Sequence Database Collaboration (INSDC). To know more the SRA overview, please see this [link](https://www.ncbi.nlm.nih.gov/sra/docs/). 
+
+Fun fact:  Did you know that tax-payer funded data are often <b>required</b> to be made available to the public and to other researchers?  You can find data from a lot of different microbiome studies on the SRA!
+
 Here, you will also learn how to download the raw sequence data from NCBI, SRA by following the steps below.
 ### How to fetch your raw sequence data from NCBI Sequence Read Archive (SRA)
 1. Go to this [link](https://www.ncbi.nlm.nih.gov/sra/SRP082686).
 2. There are 54 items and those are raw 16S rRNA gene amplicon sequencing data from Centralia coal mine surface soil consist of 18 different sites and three replicates for each site. Pick the data that you want to download. For example, number 1. [C04D01_GTATGCGCTGTA_L001_R1_001](https://www.ncbi.nlm.nih.gov/sra/SRX2043754[accn]).
-3. Click the item and you will see the information about the sequence.
+3. Click the item and you will see the information about the sequence.  Here, you want to select the same samples from the table above - C04, C13, and C17.
 4. Click the SRR number under "Run" tab (for example: SRR4054183). 
 5. Go to "Download" tab and hit "SRA Toolkit" to download SRA Toolkit. The SRA Toolkit is needed to download the sequence and split the paired-ends reads into two fastQ files.
 6. Download the toolkit version 2.9.2 according to your computer spec.
