@@ -168,7 +168,7 @@ Use the provided OTU table (there should be 3 columns one for each sample) for t
 2.  Intepret the chart.  What does it tell you about the evenness of the community?
 
 #### Step 4.  Assess the richness for each sample.
-Use the provided OTU table for this step.  First, copy the data and paste it into a new sheet. Make a presence-absence table from the data but Finding and Replacing and values > 1 with 1.  Us an IF formula to do so:
+Use the provided OTU table for this step.  First, copy the data and paste it into a new sheet. Make a presence-absence table from the data but Finding and Replacing and values > 1 with 1.  Use an IF formula to do so:
 =IF(*cell*>1,1,0)
 The interpretation of this statement is that if the contents in the cell are greater than 1, replace with 1, and if not, replace with zero.  In the end, the zeros (absenses) will remain zeros.  This transformation removes the relative abundance data and provides presence-absence data, but allows for easy plotting of how many new OTUs are observed with increasing sequencing effort. 
 1.  What is the richness for each sample?  Which sample has the highest richness?  Which has the lowest? 
@@ -176,7 +176,7 @@ The interpretation of this statement is that if the contents in the cell are gre
 
 #### Step 5. Make the final report
 Make your final report in word document. The final report should be turned in (one per team) on D2L.  The content should include: 
-1.  Introduction:  summarize and synthesize your background reading on the Centralia environment and unique expectations of its microbial ecology.  THis should be 2-3 paragraphs.  Use the references provided on D2L, but you are welcome to find additional references.  
+1.  Introduction:  summarize and synthesize your background reading on the Centralia environment and unique expectations of its microbial ecology.  This should be 2-3 paragraphs.  Use the references provided on D2L, but you are welcome to find additional references.  
 2.  Results.  Use the headings above for steps 1-4 and answer each question in full sentences. Insert any charts and figures into the report.  
 3.  Conclusions and Future Directions.  Based on your exploration of these sequences, what conclusions can you make about the communities that live in Centralia?  What outstanding hypothese do you have?  What additional sampling or experiments could be done to address these hypotheses?  
 4.  Annotated references.  Use the numeric alphabetica citation format (the same as for the Microbial Ecosystems Project) and annotated in the same way.  
