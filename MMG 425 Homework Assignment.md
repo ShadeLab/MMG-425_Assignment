@@ -51,9 +51,13 @@ Here, you will also learn how to download the raw sequence data from NCBI, SRA b
 ```
 sratoolkit.2.9.2-mac64/bin/./prefetch <SRRnumber>
 sratoolkit.2.9.2-mac64/bin/./fastq-dump --skip technical -I --split-3 <SRRnumber>
+md5sum <filename>
 ```
 The first command will give you the SRA file according to the SRR number. The file is located in the ncbi file in your home directory (for example: SRR4054183.sra).
 The second command will splits paired reads into two separate fastQ files: *_1.fastq and *_2.fastq.
+The third command will reveal the size of the files as MD5 hash.
+ANSWER THE QUESTION for the Results section of your report:
+What is the MD5 sum of each SRA file?
 
 ### Getting familiar with 16S rRNA sequence data file format: the FastQ File
 <i>Background</i>. 
