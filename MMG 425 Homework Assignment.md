@@ -39,7 +39,7 @@ Fun fact:  Did you know that tax-payer funded data are often <b>required</b> to 
 Here, you will also learn how to download the raw sequence data from NCBI, SRA by following the steps below.
 ### How to fetch your raw sequence data from NCBI Sequence Read Archive (SRA)
 1. Go to this [link](https://www.ncbi.nlm.nih.gov/sra/SRP082686).
-2. There are 54 items and those are raw 16S rRNA gene amplicon sequencing data from Centralia coal mine surface soil consist of 18 different sites and three replicates for each site. Pick the data that you want to download. For example, number 1. [C04D01_GTATGCGCTGTA_L001_R1_001](https://www.ncbi.nlm.nih.gov/sra/SRX2043754[accn]).
+2. There are 54 items and those are raw 16S rRNA gene amplicon sequencing data from Centralia coal mine surface soil consist of 18 different sites and three replicates for each site. Pick and download the data number 1, 2, and 3.
 3. Click the item and you will see the information about the sequence.  Here, you want to select the same samples from the table above - C04, C13, and C17.
 4. Click the SRR number under "Run" tab (for example: SRR4054183). 
 5. Go to "Download" tab and hit "SRA Toolkit" to download SRA Toolkit. The SRA Toolkit is needed to download the sequence and split the paired-ends reads into two fastQ files.
@@ -56,8 +56,9 @@ md5sum <filename>
 The first command will give you the SRA file according to the SRR number. The file is located in the ncbi file in your home directory (for example: SRR4054183.sra).
 The second command will splits paired reads into two separate fastQ files: *_1.fastq and *_2.fastq.
 The third command will reveal the size of the files as MD5 hash.
+
 ANSWER THE QUESTION for the Results section of your report:
-What is the MD5 sum of each SRA file?
+1. What is the MD5 sum of each SRA file?
 
 ### Getting familiar with 16S rRNA sequence data file format: the FastQ File
 <i>Background</i>. 
