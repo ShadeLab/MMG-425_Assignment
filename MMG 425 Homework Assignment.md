@@ -113,10 +113,9 @@ To read up about the RDPipeline, you can go to the [website](http://pyro.cme.msu
 The initial processing of RDPipeline contains multi-steps process and quality filtering including sorting the raw reads by sample tag, trimming off tag and primer regions, and removing low quality sequences (Cole et al. 2014). It also uses a tool called Assembler to assembly the paired-end reads (Cole et al. 2014). Go to this [link](http://rdp.cme.msu.edu/tutorials/init_process/RDPtutorial_INITIAL-PROCESS_pe.html) to get you familiar with the tool.
 1. Download three tar files on D2L. One tar file for one sample.
 (add picture and info of where they can find the data) 
-2. Each tar file that contains two paired fastq files.
-For example:
-C04_05102014_R1_D01_GTATGCGCTGTA_L001_R1_001.fastq C04_05102014_R1_D01_GTATGCGCTGTA_L001_R2_001.fastq
-3. Go to this [link](https://pyro.cme.msu.edu/init/form.spr).
+2. Each tar file contains two paired fastq files (i.e. C04_05102014_R1_D01_GTATGCGCTGTA_L001_R1_001.fastq
+C04_05102014_R1_D01_GTATGCGCTGTA_L001_R2_001.fastq). You do not need to extract the tar file.
+3. Go to this [link](https://pyro.cme.msu.edu/init/form.spr). Hit the "TEST DRIVE" button.
 4. Upload each of your ".tar" file to the initial processing tool [main page](https://pyro.cme.msu.edu/init/form.spr).
 5. Fill the initial processing form. The forward primer(s) or reverse primer(s) are not required because primer are already removed from these sequences. 
 Job name = use any name that you want.
