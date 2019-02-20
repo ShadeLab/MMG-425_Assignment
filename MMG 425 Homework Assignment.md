@@ -37,30 +37,33 @@ The Sequence Read Archive (SRA) is an international data repository that stores 
 Fun fact:  Did you know that tax-payer funded data are often <b>required</b> to be made available to the public and to other researchers?  You can find data from a lot of different microbiome studies on the SRA!
 
 Here, you will also learn how to download the raw sequence data from NCBI, SRA by following the steps below.
+
 ### How to fetch your raw sequence data from NCBI Sequence Read Archive (SRA)
 1. Go to this [link](https://www.ncbi.nlm.nih.gov/sra/SRP082686).
-2. There are 54 items and those are raw 16S rRNA gene amplicon sequencing data from Centralia coal mine surface soil consist of 18 different sites and three replicates for each site. Pick and download the data number 1, 2, and 3.
-3. Click the item and you will see the information about the sequence.  Here, you want to select the same samples from the table above - C04, C13, and C17.
-4. Click the SRR number under "Run" tab (for example: SRR4054183). 
-5. Go to "Download" tab and hit "SRA Toolkit" to download SRA Toolkit. The SRA Toolkit is needed to download the sequence and split the paired-ends reads into two fastQ files.
-6. Download the toolkit version 2.9.2 according to your computer spec.
-7. Extract the .tar file in your local computer (for example: sratoolkit.2.9.2-mac64.tar) then put the extracted file in the directory you want.
-8. Open the Terminal in your mac (or any command line program that you can install and use for Windows, such as [MobaXterm](https://mobaxterm.mobatek.net/)). The app is in the Utilities folder in Applications.
-9. Path to the directory where you put the sratoolkit file.
-10. Download raw sequence of interest and convert the SRA file into fastQ file by running the two commands below:
-```
-sratoolkit.2.9.2-mac64/bin/./prefetch <SRRnumber>
-sratoolkit.2.9.2-mac64/bin/./fastq-dump --skip technical -I --split-3 <SRRnumber>
-```
-The first command will give you the SRA file according to the SRR number. The file is located in the ncbi file in your home directory (for example: SRR4054183.sra).
-The second command will splits paired reads into two separate fastQ files: *_1.fastq and *_2.fastq.
+![image](....)
 
-11. Run the 'vdb-validate' function below:
-```
-sratoolkit.2.9.2-mac64/bin/./vdb-validate <SRRnumber>
-```
-ANSWER THE QUESTION for the Results section of your report:
-1. What is the output of the 'vdb-validate' function of each SRA file? Why should we perform this function?
+There are 54 items and those are raw 16S rRNA gene amplicon sequencing data from Centralia coal mine surface soil consist of 18 different sites and three replicates for each site. 
+2. Click the item and you will see the information about the sequence.  
+![image](....)
+3. Click the SRR number under "Run" tab (for example: SRR4054183). 
+
+
+
+
+
+5. Go to "Download" tab and hit "SRA Toolkit" to download SRA Toolkit. The SRA Toolkit is needed to download the sequence and split the paired-ends reads into two fastQ files.
+
+
+
+
+
+
+9. Path to the directory where you put the sratoolkit file.
+
+
+
+
+
 
 ### Getting familiar with 16S rRNA sequence data file format: the FastQ File
 <i>Background</i>. 
@@ -124,26 +127,13 @@ To read up about the RDPipeline, you can go to the [website](http://pyro.cme.msu
 ### The RDPipeline Processing Steps:
 #### Step 1. Initial Processing–Assemble Paired End Reads
 The initial processing of RDPipeline contains multi-steps process and quality filtering including sorting the raw reads by sample tag, trimming off tag and primer regions, and removing low quality sequences (Cole et al. 2014). It also uses a tool called Assembler to assembly the paired-end reads (Cole et al. 2014). Go to this [link](http://rdp.cme.msu.edu/tutorials/init_process/RDPtutorial_INITIAL-PROCESS_pe.html) to get you familiar with the tool.
-1. Use the fastQ files of 16S rRNA gene sequence data from 3 samples (C04, C13, and C17) that have been downloaded from D2L as the input fastQ files. Open the ".tar" file. There are 6 fastQ files (one pairs from each sample).
-```
-C04_05102014_R1_D01_GTATGCGCTGTA_L001_R1_001.fastq
-C04_05102014_R1_D01_GTATGCGCTGTA_L001_R2_001.fastq
-C13_06102014_R2_D10_CGCAGCGGTATA_L001_R1_001.fastq
-C13_06102014_R2_D10_CGCAGCGGTATA_L001_R2_001.fastq
-C17_06102014_R1_D01_GGCCACGTAGTA_L001_R1_001.fastq
-C17_06102014_R1_D01_GGCCACGTAGTA_L001_R2_001.fastq
-```
-2. Compile each pair into one ".tar" file so you will have three ".tar" file that you will upload one by one. How to make ".tar" file using command line:
-a. open your terminal.
-b. path into where you put your fastQ files and type:
-```
-tar -cvf *name*.tar *your fastq files*
+1. Download three tar files on D2L 
+2. Use the fastQ files of 16S rRNA gene sequence data from 3 samples (C04, C13, and C17) that have been downloaded from D2L as the input fastQ files. Open the ".tar" file. There are 6 fastQ files (one pairs from each sample).
 
-for example:
-tar -cvf CO4.tar C04_05102014_R1_D01_GTATGCGCTGTA_L001_R1_001.fastq C04_05102014_R1_D01_GTATGCGCTGTA_L001_R2_001.fastq
+Each tar file that contains those two fastq files.
+C04_05102014_R1_D01_GTATGCGCTGTA_L001_R1_001.fastq C04_05102014_R1_D01_GTATGCGCTGTA_L001_R2_001.fastq
 
-will give you C04.tar file that contains those two fastq files.
-```
+
 2. Go to this [link](https://pyro.cme.msu.edu/init/form.spr).
 3. Upload each of your ".tar" file to the initial processing tool [main page](https://pyro.cme.msu.edu/init/form.spr).
 4. Fill the initial processing form. The forward primer(s) or reverse primer(s) are not required because primer are already removed from these sequences. 
