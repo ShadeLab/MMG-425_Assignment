@@ -48,7 +48,7 @@ There are 54 items and those are raw 16S rRNA gene amplicon sequencing data from
 ![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/SRA%20Fig%203.png)
 ![image]()
 4. Example of FastQ file downloaded from SRA.
-![image]()
+![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/SRA%20Fig%205.png)
 
 ### Getting familiar with 16S rRNA sequence data file format: the FastQ File
 <i>Background</i>. 
