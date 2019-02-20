@@ -46,7 +46,7 @@ There are 54 items and those are raw 16S rRNA gene amplicon sequencing data from
 ![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/SRA%20Fig%202.png)
 3. Click the SRR number under "Run" tab (for example: SRR4054183). If you want to download the sequence file, go to "Download" tab and hit "SRA Toolkit" to download SRA Toolkit. The SRA Toolkit is needed to download the sequence and split the paired-ends reads into two fastQ files.
 ![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/SRA%20Fig%203.png)
-![image]()
+![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/SRA%20Fig%204.png)
 4. Example of FastQ file downloaded from SRA.
 ![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/SRA%20Fig%205.png)
 
