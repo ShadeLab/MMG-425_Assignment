@@ -40,8 +40,7 @@ Here, you will also learn how to download the raw sequence data from NCBI, SRA b
 
 ### How to fetch your raw sequence data from NCBI Sequence Read Archive (SRA)
 1. Go to this [link](https://www.ncbi.nlm.nih.gov/sra/SRP082686).
-![image](....)
-
+![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/SRA%20Fig%201.png)
 There are 54 items and those are raw 16S rRNA gene amplicon sequencing data from Centralia coal mine surface soil consist of 18 different sites and three replicates for each site. 
 2. Click the item and you will see the information about the sequence.  
 ![image](....)
