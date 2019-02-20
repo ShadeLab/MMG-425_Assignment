@@ -115,8 +115,9 @@ The initial processing of RDPipeline contains multi-steps process and quality fi
 (add picture and info of where they can find the data) 
 2. Each tar file contains two paired fastq files (i.e. C04_05102014_R1_D01_GTATGCGCTGTA_L001_R1_001.fastq
 C04_05102014_R1_D01_GTATGCGCTGTA_L001_R2_001.fastq). You do not need to extract the tar file.
-3. Go to this [link](https://pyro.cme.msu.edu/init/form.spr). Hit the "TEST DRIVE" button.
-4. Upload each of your ".tar" file to the initial processing tool [main page](https://pyro.cme.msu.edu/init/form.spr).
+3. Go to this [link](https://pyro.cme.msu.edu/init/form.spr). Hit the "TEST DRIVE" button and you will see the page below.
+![image]()
+4. Upload each of your ".tar" file to the initial processing
 5. Fill the initial processing form. The forward primer(s) or reverse primer(s) are not required because primer are already removed from these sequences. 
 Job name = use any name that you want.
 Max number of N's = 0 (number of ambiguous base allowed).
