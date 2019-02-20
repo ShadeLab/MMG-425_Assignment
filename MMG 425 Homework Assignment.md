@@ -122,7 +122,7 @@ C04_05102014_R1_D01_GTATGCGCTGTA_L001_R2_001.fastq). You do not need to extract 
 Job name = use any name that you want.
 Sequence File in FASTA, FASTQ or SFF Format = upload your tar file here.
 Upload a tag file = skip this part.
-Gene Name = choose "Bacterial 16S"
+Gene Name = choose "Bacterial 16S".
 Forward Primers and Reverse Primers = skip this because primers are already removed from these sequences.
 Fill the FILTERS part.
 Forward and Reverse primer max edit distance = skip this part.
@@ -141,14 +141,16 @@ Max sequence length = 280.
 #### Step 2. Taxonomic Classification Using RDP Classifier
 1. Open the [RDP Classifier](http://rdp.cme.msu.edu/tutorials/classifier/classifer_cover_page.html) and inspect it. We will not run RDP Classifier interactively because our data are more than 50 MB. Instead, we will run RDP Classifier on RDPipeline (number 2).
 2. Open this [link](http://rdp.cme.msu.edu/tutorials/classifier/RDPtutorial_CLASSIFIER.html) to get you familiar with the tool, input, and output files. 
-3. Go to this [link](https://pyro.cme.msu.edu/classifier/form.spr) and fill the form. 
+3. Go to this [link](https://pyro.cme.msu.edu/classifier/form.spr) and you will see the page below.
+![image]()
+4. Fill the form. 
 Job name = use any name that you want.
 Select a gene = choose "Bacterial 16S".
 Select a format = select "fixrank" and wait for the output. 
 Confidence Cutoff (0-100) = 80.
 Select your file to upload = upload the *NoTag_trimmed.fastq* file here.
 Hit "Submit For Classification" and wait for the output.
-4. Examine the output for dominant and rare taxa. Capture the "hierarchy.txt" file and dump it to Excel. Sort the file again by “Phylum” to capture the frequency of matches to Phylum. SAVE THE THREE CLASSIFICATIONS IN AN EXCEL FILE USING PHYLUM AS THE IDENTIFIER AND ANSWER THESE QUESTIONS BELOW:
+5. Examine the output for dominant and rare taxa. Capture the "hierarchy.txt" file and dump it to Excel. Sort the file again by “Phylum” to capture the frequency of matches to Phylum. SAVE THE THREE CLASSIFICATIONS IN AN EXCEL FILE USING PHYLUM AS THE IDENTIFIER AND ANSWER THESE QUESTIONS BELOW:
 1.  What is the most common taxon at the Phylum level, for each sample? 
 2.  What is the rarest taxon at the Phylum level, for each sample?
 3.  Make a stacked bar chart. Make a stacked bar for each sample, so you will have three stacked bar in one chart. See the [example](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/Phylum_level_composition.png). Compare:  How does the phylum-level composition vary by soil temperature and fire impact?
