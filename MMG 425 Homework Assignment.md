@@ -116,10 +116,15 @@ The initial processing of RDPipeline contains multi-steps process and quality fi
 2. Each tar file contains two paired fastq files (i.e. C04_05102014_R1_D01_GTATGCGCTGTA_L001_R1_001.fastq
 C04_05102014_R1_D01_GTATGCGCTGTA_L001_R2_001.fastq). You do not need to extract the tar file.
 3. Go to this [link](https://pyro.cme.msu.edu/init/form.spr). Hit the "TEST DRIVE" button and you will see the page below.
-![image]()
-4. Upload each of your ".tar" file to the initial processing
-5. Fill the initial processing form. The forward primer(s) or reverse primer(s) are not required because primer are already removed from these sequences. 
+![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/RDP_Init%20Fig%201.png)
+4. Fill the initial processing form. 
 Job name = use any name that you want.
+Sequence File in FASTA, FASTQ or SFF Format = upload your tar file here.
+Upload a tag file (optional) = skip this.
+Gene Name = choose "Bacterial 16S"
+Forward Primers and Reverse Primers = skip this because primers are already removed from these sequences.
+Fill the FILTERS part.
+Forward and Reverse primer max edit distance = skip this part.
 Max number of N's = 0 (number of ambiguous base allowed).
 Min Read Q score = 27 (minimum Phred score used).
 Min sequence length = 250.
@@ -130,6 +135,7 @@ Max sequence length = 280.
 8. Download the output file once the job is complete.
 9. Inspect your output data by looking at the output file [example](http://rdp.cme.msu.edu/tutorials/init_process/RDPtutorial_INITIAL-PROCESS_pe.html).
 10. The output file will contain two folders/directories. First folder "assembled_paired_end_sequences" contains the assembled paired sequences in FASTQ format and the assembled analysis results in (FASTQ.LOG) directly output from the Assembler (first stage), one for each pair of input FASTAQ files. Second, the results of stage 2 that are combined in folder called "NoTag". The *NoTag_trimmed.fastq* file is trimmed sequences that are ready for downstream analysis, such as classification using the RDP Classifier.
+11. You will use the *NoTag_trimmed.fastq* file for the taxonomic classification.
 
 #### Step 2. Taxonomic Classification Using RDP Classifier
 1. Open the [RDP Classifier](http://rdp.cme.msu.edu/tutorials/classifier/classifer_cover_page.html) and inspect it. We will not run RDP Classifier interactively because our data are more than 50 MB. Instead, we will run RDP Classifier on RDPipeline (number 2).
