@@ -142,7 +142,7 @@ Max sequence length = 280.
 1. Open the [RDP Classifier](http://rdp.cme.msu.edu/tutorials/classifier/classifer_cover_page.html) and inspect it. We will not run RDP Classifier interactively because our data are more than 50 MB. Instead, we will run RDP Classifier on RDPipeline (number 2).
 2. Open this [link](http://rdp.cme.msu.edu/tutorials/classifier/RDPtutorial_CLASSIFIER.html) to get you familiar with the tool, input, and output files. 
 3. Go to this [link](https://pyro.cme.msu.edu/classifier/form.spr) and you will see the page below.
-![image]()
+![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/RDP_Class%20Fig%201.png)
 4. Fill the form. 
 Job name = use any name that you want.
 Select a gene = choose "Bacterial 16S".
