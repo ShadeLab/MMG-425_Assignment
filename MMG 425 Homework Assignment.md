@@ -112,8 +112,7 @@ To read up about the RDPipeline, you can go to the [website](http://pyro.cme.msu
 ### The RDPipeline Processing Steps:
 #### Step 1. Initial Processing–Assemble Paired End Reads
 The initial processing of RDPipeline contains multi-steps process and quality filtering including sorting the raw reads by sample tag, trimming off tag and primer regions, and removing low quality sequences (Cole et al. 2014). It also uses a tool called Assembler to assembly the paired-end reads (Cole et al. 2014). Go to this [link](http://rdp.cme.msu.edu/tutorials/init_process/RDPtutorial_INITIAL-PROCESS_pe.html) to get you familiar with the tool.
-1. Download three tar files on D2L. One tar file for one sample.
-(add picture and info of where they can find the data) 
+1. Download three tar files on D2L. One tar file for one sample. Open your D2L and go to "Team Assignments" folder. Then go to "Team Assignments 1: Microbiome Sequence Analysis" folder. The sequence tar file can be found under "Data" folder.
 2. Each tar file contains two paired fastq files (i.e. C04_05102014_R1_D01_GTATGCGCTGTA_L001_R1_001.fastq
 C04_05102014_R1_D01_GTATGCGCTGTA_L001_R2_001.fastq). You do not need to extract the tar file.
 3. Go to this [link](https://pyro.cme.msu.edu/init/form.spr). Hit the "TEST DRIVE" button and you will see the page below.
@@ -146,7 +145,7 @@ Max sequence length = 280.
 4. Fill the form. 
 Job name = use any name that you want.
 Select a gene = choose "Bacterial 16S".
-Select a format = select "fixrank" and wait for the output. 
+Select a format = select "fixrank". 
 Confidence Cutoff (0-100) = 80.
 Select your file to upload = upload the *NoTag_trimmed.fastq* file here.
 Hit "Submit For Classification" and wait for the output.
@@ -157,6 +156,7 @@ Hit "Submit For Classification" and wait for the output.
 4.  Make a hypothesis to explain why particular phyla are found in particular sites.  Hint: use the environmental data provided above, and then use the internet and other references to look up the requirements of the most informative phyla and use that information to inform your hypothesis.  Make sure that you make a statement explaining the phylum distributions for each sample. 
 
 #### Step 3. Making a Species Abundance Distribution to assess evenness.
+Download the OTU table on D2L. Open your D2L and go to "Team Assignments" folder. Then go to "Team Assignments 1: Microbiome Sequence Analysis" folder. The "otu_table" can be found under "Data" folder.
 Use the provided OTU table (there should be 3 columns one for each sample) for this step.  First, sum the total abundance for each OTU.  OTUs are in ROWS, so make a new column of row sums in excel.  Then, sort from high to low.  
 1.  From these data, construct a Species Abundance Distribution (also sometimes called a ranked abundance curve). Remember that the x-axis is the ranked taxa from most to least abundant, and the y-axis is the abundance.  Save the chart for the lab report.
 2.  Intepret the chart.  What does it tell you about the evenness of the community?
