@@ -103,7 +103,7 @@ Taxonomic classification of OTU representatives into seven levels (Domain, Phylu
 
 ## TUTORIAL FOR 16S rRNA GENE SEQUENCE ANALYSIS USING RDP's PIPELINE
 Form into CATME teams and gather together in the class room. Have at least one laptop with wireless connection amongst you, with Excel and a web browser open.
-We will use paired-end of 16S rRNA gene sequences that have been downloaded from NCBI, SRA as described previously. There are three pairs of fastQ files (six sequence fastQ files in total) that were compressed into one .tar file. 
+We will provide you three pairs of fastQ files (three tar files) that you can download from D2L.
 
 ### Go to this [link](http://rdp.cme.msu.edu/tutorials/workflows/16S_supervised_flow.html) to observe the 16S supervised workflow of RDP's pipeline 
 To read up about the RDPipeline, you can go to the [website](http://pyro.cme.msu.edu)
@@ -111,16 +111,14 @@ To read up about the RDPipeline, you can go to the [website](http://pyro.cme.msu
 ### The RDPipeline Processing Steps:
 #### Step 1. Initial Processing–Assemble Paired End Reads
 The initial processing of RDPipeline contains multi-steps process and quality filtering including sorting the raw reads by sample tag, trimming off tag and primer regions, and removing low quality sequences (Cole et al. 2014). It also uses a tool called Assembler to assembly the paired-end reads (Cole et al. 2014). Go to this [link](http://rdp.cme.msu.edu/tutorials/init_process/RDPtutorial_INITIAL-PROCESS_pe.html) to get you familiar with the tool.
-1. Download three tar files on D2L 
-2. Use the fastQ files of 16S rRNA gene sequence data from 3 samples (C04, C13, and C17) that have been downloaded from D2L as the input fastQ files. Open the ".tar" file. There are 6 fastQ files (one pairs from each sample).
-
-Each tar file that contains those two fastq files.
+1. Download three tar files on D2L. One tar file for one sample.
+(add picture and info of where they can find the data) 
+2. Each tar file that contains two paired fastq files.
+For example:
 C04_05102014_R1_D01_GTATGCGCTGTA_L001_R1_001.fastq C04_05102014_R1_D01_GTATGCGCTGTA_L001_R2_001.fastq
-
-
-2. Go to this [link](https://pyro.cme.msu.edu/init/form.spr).
-3. Upload each of your ".tar" file to the initial processing tool [main page](https://pyro.cme.msu.edu/init/form.spr).
-4. Fill the initial processing form. The forward primer(s) or reverse primer(s) are not required because primer are already removed from these sequences. 
+3. Go to this [link](https://pyro.cme.msu.edu/init/form.spr).
+4. Upload each of your ".tar" file to the initial processing tool [main page](https://pyro.cme.msu.edu/init/form.spr).
+5. Fill the initial processing form. The forward primer(s) or reverse primer(s) are not required because primer are already removed from these sequences. 
 Job name = use any name that you want.
 Max number of N's = 0 (number of ambiguous base allowed).
 Min Read Q score = 27 (minimum Phred score used).
