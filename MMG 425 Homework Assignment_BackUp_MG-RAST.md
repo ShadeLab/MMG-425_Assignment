@@ -124,7 +124,7 @@ Tick "I do not want to supply metadata".
 Select project name as you want.
 Select sequence files.
 Choose pipeline options as below.
-![image]
+![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG_RAST%20Fig%204.png)
 
 
 
