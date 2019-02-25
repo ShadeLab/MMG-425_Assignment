@@ -125,6 +125,8 @@ Select project name as you want.
 Select sequence files.
 Choose pipeline options as below.
 ![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG_RAST%20Fig%204.png)
+Submit it.
+![image](
 
 
 
