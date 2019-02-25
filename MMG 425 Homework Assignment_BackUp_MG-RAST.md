@@ -125,11 +125,8 @@ Select project name as you want.
 Select sequence files.
 Choose pipeline options as below.
 ![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG_RAST%20Fig%204.png)
-Submit it.
-![image](
-
-
-
+Choose the deafault (data stay private) and submit your job.
+![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG_RAST%20Fig%205.png)
 
 #### Step 2. Taxonomic Classification Using RDP Classifier
 1. Open the [RDP Classifier](http://rdp.cme.msu.edu/tutorials/classifier/classifer_cover_page.html) and inspect it. We will not run RDP Classifier interactively because our data are more than 50 MB. Instead, we will run RDP Classifier on RDPipeline (number 2).
