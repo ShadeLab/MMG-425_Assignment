@@ -115,7 +115,7 @@ You will get a notification by email that you have successfully registered an ac
 1. Download and extract the three tar files on D2L. Each tar file contains two paired fastQ files (forward and reverse). You will use the forward sequence only for each sample ($sequence_name$_L001_R1_001.fastq, e.g C17_06102014_R1_D01_GGCCACGTAGTA_L001_R1_001.fastq).
 2. Log in into MG-RAST using your account.
 3. Hit "UPLOAD" button as shown below to start upload your forward sequences. You will have three fastQ files for three samples to upload.
-![image](....)
+![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG_RAST%20Fig.1.png)
 4. Wait until your sequences are succesfully uploaded then hit "Next" button.
 5. Fill the form below:
 Tick "I do not want to supply metadata".
