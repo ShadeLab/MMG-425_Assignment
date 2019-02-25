@@ -117,6 +117,7 @@ You will get a notification by email that you have successfully registered an ac
 3. Hit "UPLOAD" button as shown below to start upload your forward sequences. You will have three fastQ files for three samples to upload.
 ![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG_RAST%20Fig.1.png)
 4. Wait until your sequences are succesfully uploaded then hit "Next" button.
+![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG_RAST%20Fig.2.png)
 5. Fill the form below:
 Tick "I do not want to supply metadata".
 ![image](....)
