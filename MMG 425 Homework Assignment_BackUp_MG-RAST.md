@@ -120,10 +120,11 @@ You will get a notification by email that you have successfully registered an ac
 ![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG_RAST%20Fig.2.png)
 5. Fill the form below:
 Tick "I do not want to supply metadata".
-![image](....)
+![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG_RAST%20Fig%203.png)
 Select project name as you want.
 Select sequence files.
-Choose pipeline options
+Choose pipeline options as below.
+![image]
 
 
 
