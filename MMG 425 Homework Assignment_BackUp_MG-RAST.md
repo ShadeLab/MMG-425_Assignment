@@ -102,41 +102,30 @@ Taxonomic classification of OTU representatives into seven levels (Domain, Phylu
 1.  There are many programs that can be used to perform diversity analyses and visualization.  A good open-source statistical computing program is R. There are also many custom programs and tools, including QIIME, mothur, MG-RAST, and KBASE.  
 2.  Here, we will use RDP pipeline and also Excel for basic diversity assessments. 
 
-## TUTORIAL FOR 16S rRNA GENE SEQUENCE ANALYSIS USING RDP's PIPELINE
+## TUTORIAL FOR 16S rRNA GENE SEQUENCE ANALYSIS USING MG-RAST PIPELINE
 Form into CATME teams and gather together in the class room. Have at least one laptop with wireless connection amongst you, with Excel and a web browser open.
 We will provide you three pairs of fastQ files (three tar files) that you can download from D2L.
 
-### Go to this [link](http://rdp.cme.msu.edu/tutorials/workflows/16S_supervised_flow.html) to observe the 16S supervised workflow of RDP's pipeline 
-To read up about the RDPipeline, you can go to the [website](http://pyro.cme.msu.edu)
+### Go to this [link](https://www.mg-rast.org/index.html) to register an account on MG-RAST.
+Fill the form [here](https://www.mg-rast.org/mgmain.html?mgpage=register).
+You will get a notification by email that you have successfully registered an account.
 
-### The RDPipeline Processing Steps:
+### The MG-RAST Pipeline Steps:
 #### Step 1. Initial Processing–Assemble Paired End Reads
-The initial processing of RDPipeline contains multi-steps process and quality filtering including sorting the raw reads by sample tag, trimming off tag and primer regions, and removing low quality sequences (Cole et al. 2014). It also uses a tool called Assembler to assembly the paired-end reads (Cole et al. 2014). Go to this [link](http://rdp.cme.msu.edu/tutorials/init_process/RDPtutorial_INITIAL-PROCESS_pe.html) to get you familiar with the tool.
-1. Download three tar files on D2L. One tar file for one sample.
-(add picture and info of where they can find the data) 
-2. Each tar file contains two paired fastq files (i.e. C04_05102014_R1_D01_GTATGCGCTGTA_L001_R1_001.fastq
-C04_05102014_R1_D01_GTATGCGCTGTA_L001_R2_001.fastq). You do not need to extract the tar file.
-3. Go to this [link](https://pyro.cme.msu.edu/init/form.spr). Hit the "TEST DRIVE" button and you will see the page below.
-![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/RDP_Init%20Fig%201.png)
-4. Fill the initial processing form. 
-Job name = use any name that you want.
-Sequence File in FASTA, FASTQ or SFF Format = upload your tar file here.
-Upload a tag file = skip this part.
-Gene Name = choose "Bacterial 16S"
-Forward Primers and Reverse Primers = skip this because primers are already removed from these sequences.
-Fill the FILTERS part.
-Forward and Reverse primer max edit distance = skip this part.
-Max number of N's = 0 (number of ambiguous base allowed).
-Min Read Q score = 27 (minimum Phred score used).
-Min sequence length = 250.
-Max sequence length = 280.
-5. Make sure to check the box "Assemble paired end reads". 
-6. Hit "Perform Initial Processing" button and wait for a while (be patient..).
-7. Check if your job is still running or complete by hitting "my jobs" tab on the right corner of the window.
-8. Download the output file once the job is complete.
-9. Inspect your output data by looking at the output file [example](http://rdp.cme.msu.edu/tutorials/init_process/RDPtutorial_INITIAL-PROCESS_pe.html).
-10. The output file will contain two folders/directories. First folder "assembled_paired_end_sequences" contains the assembled paired sequences in FASTQ format and the assembled analysis results in (FASTQ.LOG) directly output from the Assembler (first stage), one for each pair of input FASTAQ files. Second, the results of stage 2 that are combined in folder called "NoTag". The *NoTag_trimmed.fastq* file is trimmed sequences that are ready for downstream analysis, such as classification using the RDP Classifier.
-11. You will use the *NoTag_trimmed.fastq* file for the taxonomic classification.
+1. Download and extract the three tar files on D2L. Each tar file contains two paired fastQ files (forward and reverse). You will use the forward sequence only for each sample ($sequence_name$_L001_R1_001.fastq, e.g C17_06102014_R1_D01_GGCCACGTAGTA_L001_R1_001.fastq).
+2. Log in into MG-RAST using your account.
+3. Hit "UPLOAD" button as shown below to start upload your forward sequences. You will have three fastQ files for three samples to upload.
+![image](....)
+4. Wait until your sequences are succesfully uploaded then hit "Next" button.
+5. Fill the form below:
+Tick "I do not want to supply metadata".
+![image](....)
+Select project name as you want.
+Select sequence files.
+Choose pipeline options
+
+
+
 
 #### Step 2. Taxonomic Classification Using RDP Classifier
 1. Open the [RDP Classifier](http://rdp.cme.msu.edu/tutorials/classifier/classifer_cover_page.html) and inspect it. We will not run RDP Classifier interactively because our data are more than 50 MB. Instead, we will run RDP Classifier on RDPipeline (number 2).
