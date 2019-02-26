@@ -118,28 +118,29 @@ You will get a notification by email that you have successfully registered an ac
 ![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG_RAST%20Fig.1.png)
 4. Wait until your sequences are succesfully uploaded then hit "Next" button.
 ![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG_RAST%20Fig.2.png)
-5. Fill the form below:
-Tick "I do not want to supply metadata".
+5. Submit your sequences:
+1.) Metadata is not required except you want to publish your data. Click "I do not want to supply metadata".
 ![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG_RAST%20Fig%203.png)
-Select project name as you want.
-Select sequence files.
-Choose pipeline options as below.
-![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG_RAST%20Fig%204.png)
-Choose the deafault (data stay private) and submit your job.
+2.) Put the project name as you want.
+3.) Select sequence files.
+4.) Choose pipeline options as below.
+![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG-RAST%20Fig%204.png)
+5.) Choose the deafault (data stay private) and submit your job.
 ![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG_RAST%20Fig%205.png)
 6. Job Status Monitor will appear and let you know the status of your job.
+![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG_RAST%20Fig%206.png)
 
 #### Step 2. Taxonomic Analysis 
 1. Go to "analysis" page.
 ![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG_RAST%20Fig%207.png)
-2. Select and add "RDP" from the available databases to the selected database.
+2. Select and add "RDP" to the selected database.
 3. Load your project name. Select "name" and your sequences will appear. You also can put your analysis name.
 4. Select all of your sequences and load your sequences by hitting the check mark button.
 ![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG_RAST%20Fig%208.png)
-
-
-
-4. Examine the output for dominant and rare taxa. Capture the "hierarchy.txt" file and dump it to Excel. Sort the file again by “Phylum” to capture the frequency of matches to Phylum. SAVE THE THREE CLASSIFICATIONS IN AN EXCEL FILE USING PHYLUM AS THE IDENTIFIER AND ANSWER THESE QUESTIONS BELOW:
+5. Select "Phylum" level in the analysis panel.
+![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG_RAST%20Fig%209.png)
+6. Click "Export" button and select "TSV" to download the output and dump it to Excel.
+7. Remove the Eukaryota from the Excel file. Examine the output for dominant and rare taxa and answer the question below:
 1.  What is the most common taxon at the Phylum level, for each sample? 
 2.  What is the rarest taxon at the Phylum level, for each sample?
 3.  Make a stacked bar chart. Make a stacked bar for each sample, so you will have three stacked bar in one chart. See the [example](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/Phylum_level_composition.png). Compare:  How does the phylum-level composition vary by soil temperature and fire impact?
