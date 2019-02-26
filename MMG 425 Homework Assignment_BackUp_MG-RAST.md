@@ -2,7 +2,7 @@
 
 ## LEARNING OBJECTIVES
 
-1. Understand the general process of microbial community analysis using 16S rRNA gene sequence data.  We will use the sequence analysis tools from the Ribosomal Database Project (RDP).
+1. Understand the general process of microbial community analysis using 16S rRNA gene sequence data.  We will use the sequence analysis tools from the Metagenomics Analysis Server (MG-RAST).
 2. Familiarize with sequence respositories (where to find and download real data), what "raw" sequence data looks like, and generally how to manipulate these data for analysis using online tools and local worksheets. 
 3. Construct charts to visualize and interpret aspects of diversity that are commonly used in community ecology.  
 4. Compare bacterial community composition across environmental gradients and hypothesize as to the drivers of the observed patterns.
@@ -11,7 +11,7 @@
 ## MATERIALS
 
 1. Raw 16S rRNA gene sequence data set from coal mine fire affected soil samples of Centralia.
-2. Access to the Ribosomal Database II Project website. 
+2. Access to the MG-RAST website. 
 3. Spreadsheet and graphics software such as Excel.
 4. References about microbes in fire-affected soils and Centralia (available on D2L).
 
@@ -99,8 +99,8 @@ Operational taxonomic unit (OTU) is cluster or group of similar sequence variant
 Taxonomic classification of OTU representatives into seven levels (Domain, Phylum, Class, Order, Family, Genus, Species) can be conducted by alignment against a 16S rRNA gene reference database such as RDP, SILVA database, GreenGenes.
 3.  We will provide an OTU table for you for this exercise.
 ### 3. Ecological Analyses
-1.  There are many programs that can be used to perform diversity analyses and visualization.  A good open-source statistical computing program is R. There are also many custom programs and tools, including QIIME, mothur, MG-RAST, and KBASE.  
-2.  Here, we will use RDP pipeline and also Excel for basic diversity assessments. 
+1.  There are many programs that can be used to perform diversity analyses and visualization.  A good open-source statistical computing program is R. There are also many custom programs and tools, including QIIME, mothur, RDP-Pipeline, and KBASE.  
+2.  Here, we will use MG-RAST and also Excel for basic diversity assessments. 
 
 ## TUTORIAL FOR 16S rRNA GENE SEQUENCE ANALYSIS USING MG-RAST PIPELINE
 Form into CATME teams and gather together in the class room. Have at least one laptop with wireless connection amongst you, with Excel and a web browser open.
