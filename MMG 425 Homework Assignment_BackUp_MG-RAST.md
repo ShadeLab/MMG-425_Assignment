@@ -130,13 +130,12 @@ Choose the deafault (data stay private) and submit your job.
 6. Job Status Monitor will appear and let you know the status of your job.
 
 #### Step 2. Taxonomic Analysis 
-1. Go to "analysis" page and load your uploaded fastQ files.
-![image]()
+1. Go to "analysis" page.
+![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG_RAST%20Fig%207.png)
 2. Select and add "RDP" from the available databases to the selected database.
 3. Load your project name. Select "name" and your sequences will appear. You also can put your analysis name.
-![image]()
-4. Select all of your sequences and load them.
-![image]()
+4. Select all of your sequences and load your sequences by hitting the check mark button.
+![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG_RAST%20Fig%208.png)
 
 
 
