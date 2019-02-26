@@ -114,7 +114,7 @@ You will get a notification by email that you have successfully registered an ac
 #### Step 1. Initial Processing–Assemble Paired End Reads
 1. Download and extract the three tar files on D2L. Each tar file contains two paired fastQ files (forward and reverse). You will use the forward sequence only for each sample ($sequence_name$_L001_R1_001.fastq, e.g C17_06102014_R1_D01_GGCCACGTAGTA_L001_R1_001.fastq).
 2. Log in into MG-RAST using your account.
-3. Hit "UPLOAD" button as shown below to start upload your forward sequences. You will have three fastQ files for three samples to upload.
+3. Hit "Upload" button as shown below to start upload your forward sequences. You will have three fastQ files for three samples to upload.
 ![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG_RAST%20Fig.1.png)
 4. Wait until your sequences are succesfully uploaded then hit "Next" button.
 ![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG_RAST%20Fig.2.png)
@@ -127,17 +127,19 @@ Choose pipeline options as below.
 ![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG_RAST%20Fig%204.png)
 Choose the deafault (data stay private) and submit your job.
 ![image](https://github.com/ShadeLab/MMG-425_Assignment/blob/master/MG_RAST%20Fig%205.png)
+6. Job Status Monitor will appear and let you know the status of your job.
 
-#### Step 2. Taxonomic Classification Using RDP Classifier
-1. Open the [RDP Classifier](http://rdp.cme.msu.edu/tutorials/classifier/classifer_cover_page.html) and inspect it. We will not run RDP Classifier interactively because our data are more than 50 MB. Instead, we will run RDP Classifier on RDPipeline (number 2).
-2. Open this [link](http://rdp.cme.msu.edu/tutorials/classifier/RDPtutorial_CLASSIFIER.html) to get you familiar with the tool, input, and output files. 
-3. Go to this [link](https://pyro.cme.msu.edu/classifier/form.spr) and fill the form. 
-Job name = use any name that you want.
-Select a gene = choose "Bacterial 16S".
-Select a format = select "fixrank" and wait for the output. 
-Confidence Cutoff (0-100) = 80.
-Select your file to upload = upload the *NoTag_trimmed.fastq* file here.
-Hit "Submit For Classification" and wait for the output.
+#### Step 2. Taxonomic Analysis 
+1. Go to "analysis" page and load your uploaded fastQ files.
+![image]()
+2. Select and add "RDP" from the available databases to the selected database.
+3. Load your project name. Select "name" and your sequences will appear. You also can put your analysis name.
+![image]()
+4. Select all of your sequences and load them.
+![image]()
+
+
+
 4. Examine the output for dominant and rare taxa. Capture the "hierarchy.txt" file and dump it to Excel. Sort the file again by “Phylum” to capture the frequency of matches to Phylum. SAVE THE THREE CLASSIFICATIONS IN AN EXCEL FILE USING PHYLUM AS THE IDENTIFIER AND ANSWER THESE QUESTIONS BELOW:
 1.  What is the most common taxon at the Phylum level, for each sample? 
 2.  What is the rarest taxon at the Phylum level, for each sample?
