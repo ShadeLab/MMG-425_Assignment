@@ -147,7 +147,7 @@ Job name = use any name that you want.
 Select a gene = choose "Bacterial 16S".
 Select a format = select "fixrank". 
 Confidence Cutoff (0-100) = 80.
-Select your file to upload = upload the *NoTag_trimmed.fastq* file here.
+Select your file to upload = upload your trimmed fastq file here.
 Hit "Submit For Classification" and wait for the output.
 5. Examine the output for dominant and rare taxa. Capture the "hierarchy.txt" file and dump it to Excel. Sort the file again by “Phylum” to capture the frequency of matches to Phylum. SAVE THE THREE CLASSIFICATIONS IN AN EXCEL FILE USING PHYLUM AS THE IDENTIFIER AND ANSWER THESE QUESTIONS BELOW:
 1.  What is the most common taxon at the Phylum level, for each sample? 
