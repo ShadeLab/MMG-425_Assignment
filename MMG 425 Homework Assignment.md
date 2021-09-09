@@ -1,4 +1,4 @@
-# MMG 425 Team Sequence Analysis Project, FALL SEMESTER 2020
+# MMG 425 Team Sequence Analysis Project, FALL SEMESTER 2021
 
 ## LEARNING OBJECTIVES
 
