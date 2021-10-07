@@ -163,7 +163,7 @@ Use the provided OTU table (there should be 3 columns one for each sample) for t
 
 #### Step 4.  Assess the richness for each sample.
 Use the provided OTU table for this step.  First, copy the data and paste it into a new sheet. Make a presence-absence table from the data but Finding and Replacing and values > 1 with 1.  Use an IF formula to do so:
-=IF(*cell*>1,1,0)
+=IF(*cell*>=1,1,0)
 The interpretation of this statement is that if the contents in the cell are greater than 1, replace with 1, and if not, replace with zero.  In the end, the zeros (absenses) will remain zeros.  This transformation removes the relative abundance data and provides presence-absence data, but allows for easy plotting of how many new OTUs are observed with increasing sequencing effort. 
 1.  What is the richness for each sample?  Which sample has the highest richness?  Which has the lowest? 
 2.  Hypothesize as to what drives the richness pattern that you observe.  What about the environment or ecology would lead to this pattern?
